@@ -4,8 +4,54 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "First Name", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "Last Name", required: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true%>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.telephone_field :phone_number, autofocus: true, autocomplete: "Phone Number", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_line_1 %><br />
+    <%= f.text_field :address_line_1, autofocus: true, maxlength: 46, autocomplete: "Address Line 1", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_line_2 %><br />
+    <%= f.text_field :address_line_2, autofocus: true, maxlength: 46, autocomplete: "Address Line 2", required: false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip, autofocus: true, minlength: 5, maxlength: 5, autocomplete: "City", pattern:"[0-9]*", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, autofocus: true, maxlength: 30, autocomplete: "City", required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.select :state, ['option1', 'option2'], autofocus: true, autocomplete: "State", required: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_field :date_of_birth, autofocus: true, autocomplete: "Date of Birth", required: true %>
   </div>
 
   <div class="field">
@@ -13,15 +59,15 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", required:true%>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", required:true %>
   </div>
 
-  <div class="actions">
+  <div id="submit" class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>

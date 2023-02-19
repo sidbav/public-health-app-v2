@@ -5,3 +5,6 @@ db/schema.rb linguist-generated
 
 # Mark any vendored files as having been vendored.
 vendor/* linguist-vendored
+
+# All of the coverage files are automatically generated when running test cases
+coverage/* linguist-generated

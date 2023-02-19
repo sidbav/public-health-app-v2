@@ -9,9 +9,6 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -68,9 +65,34 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
 end
+
+# for Heroku deployment
+group :development, :test do
+  gem 'byebug'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+  gem "rubycritic", require: false
+  gem 'sqlite3'
+  gem 'ZenTest'
+end
+
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'cucumber-rails-training-wheels'
+  gem 'rails-controller-testing'
+  gem 'simplecov', require: false
+end
+
+group :production do
+  gem 'pg'
+end
+
