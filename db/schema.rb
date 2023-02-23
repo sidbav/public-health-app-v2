@@ -14,11 +14,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_22_223709) do
   create_table "questions", force: :cascade do |t|
     t.integer "survey_id", null: false
     t.string "language", null: false
-    t.string "question_text", null: false
-    t.json "options_list", null: false
+    t.text "question_text", null: false
+    t.text "options_list", null: false
+    t.integer "option_points_list", null: false
+    t.integer "question_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["survey_id", "language"], name: "index_questions_on_survey_id_and_language", unique: true
+    t.index ["survey_id", "language"], name: "index_questions_on_survey_id_and_language"
     t.index ["survey_id"], name: "index_questions_on_survey_id"
   end
 
