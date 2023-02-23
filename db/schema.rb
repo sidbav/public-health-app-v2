@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_22_223709) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_23_021406) do
   create_table "questions", force: :cascade do |t|
     t.integer "survey_id", null: false
     t.string "language", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_22_223709) do
     t.string "survey_category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "languages", null: false
     t.index ["survey_name"], name: "index_surveys_on_survey_name", unique: true
   end
 

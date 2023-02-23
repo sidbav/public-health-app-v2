@@ -57,6 +57,12 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def start_survey
+    @survey = Survey.find(params[:survey_id])
+    @language = params[:language]
+    @questions = Question.where(survey_id: @survey.id, language: @language)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
@@ -67,4 +73,6 @@ class QuestionsController < ApplicationController
     def question_params
       params.fetch(:question, {})
     end
+
+
 end
