@@ -104,19 +104,6 @@ And /User enters an already taken email and all other fields are valid/ do
   fill_in "user[password_confirmation]", with: "helloworld"
 end
 
-When /I go to the sign in page/ do
-  visit "/users/sign_in"
-end
-
-And /I enter the correct email and password for a user who is signed up/ do
-  fill_in "user[email]", with: "testuser@test.com"
-  fill_in "user[password]", with: "Test123"
-end
-
-And /I click "Log in"/ do
-  click_button "Log in"
-end
-
 And /I click the "Log in" hyperlink/ do
   click_link "Log in"
 end
