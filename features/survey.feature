@@ -1,0 +1,33 @@
+Feature: Survey Feature
+  As a user
+  I want to be able to fill out a survey
+  So that I can give feedback on the product
+
+Background: surveys and users in database
+  Given the following surveys exist:
+  | survey_name | survey_category | languages |
+  | U.S. Household Food Security Survey | Food Security | English, Spanish, Chinese |
+  | Six-Item Short Form of the Food Security Survey | Food Security | English |
+
+
+  Given the following users exist:
+  | first_name | last_name | phone_number | address_line_1 | address_line_2 | zip   | city            | state        | date_of_birth | email             | password |
+  | Test       | User      | 1231231234   | 123 Street     |                | 12345 | College Station | Texas        | 1999-01-01    | testuser@test.com | Test123  |
+
+
+Scenario: User is not logged in and tries to access the survey
+  Given I am not logged in
+  When I visit the home screen
+  Then I should see the message "Please sign in to fill survey"
+
+Scenario: User is logged in and can access the survey
+  Given I am logged in
+  When I visit the home screen
+  Then I should see a link to fill out the survey
+
+Scenario: User can view list of surveys
+  Given I am logged in
+  When I click on the survey link
+  Then I should see a table Surveys
+
+

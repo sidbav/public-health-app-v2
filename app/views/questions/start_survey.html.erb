@@ -1,0 +1,13 @@
+<h1>Survey Questions</h1>
+
+<ol>
+  <% @questions.each do |question| %>
+    <li>
+      <%= question.question_list %><br>
+      <% question.options_list.each do |option| %>
+        <%= option %><br>
+      <% end %>
+      <%= link_to "Next", "#" %>
+    </li>
+  <% end %>
+</ol>

@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Surveys</h1>
+
+<div id="surveys">
+<table>
+  <thead>
+    <tr>
+      <th>Survey Name</th>
+      <th>Survey Category</th>
+      <th>Survey Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @surveys.each do |survey| %>
+      <tr>
+        <td><%= survey.survey_name %></td>
+        <td><%= survey.survey_category %></td>
+        <td><%= "Incomplete" %></td>
+        <td><%= link_to "Take Survey", select_language_survey_path(survey) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<%= link_to "New survey", new_survey_path %>
