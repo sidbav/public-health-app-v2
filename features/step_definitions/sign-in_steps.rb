@@ -1,5 +1,3 @@
-
-
   When /I go to the sign in page/ do
     visit "/users/sign_in"
   end
