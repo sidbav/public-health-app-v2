@@ -1,0 +1,36 @@
+Using the default profile...
+Feature: Application Sign in
+  As a patient
+  I want to log into the application
+  So I can access the health surveys, gain access to resources and share the results of the surveys with my doctor. 
+
+  Background: Users in database      # features/sign-in.feature:7
+    Given the following users exist: # features/step_definitions/signup_steps.rb:1
+      | first_name | last_name | phone_number | address_line_1 | address_line_2 | zip   | city            | state        | date_of_birth | email             | password |
+      | Test       | User      | 1231231234   | 123 Street     |                | 12345 | College Station | Texas        | 1999-01-01    | testuser@test.com | Test123  |
+
+  Scenario: Signed up users providing correct credetials can sign in       # features/sign-in.feature:16
+    When I go to the sign in page                                          # features/step_definitions/sign-in_steps.rb:3
+    And I enter the correct email and password for a user who is signed up # features/step_definitions/sign-in_steps.rb:7
+    And I click "Log in"                                                   # features/step_definitions/sign-in_steps.rb:26
+    Then I should be redirected to the welcome page                        # features/step_definitions/signup_steps.rb:38
+    And I should see "Signed in successfully."                             # features/step_definitions/signup_steps.rb:42
+
+  Scenario: Only users who signed up can sign in         # features/sign-in.feature:24
+    When I go to the sign in page                        # features/step_definitions/sign-in_steps.rb:3
+    And I enter an email for a user who is not signed up # features/step_definitions/sign-in_steps.rb:12
+    And I click "Log in"                                 # features/step_definitions/sign-in_steps.rb:26
+    Then I should stay on the sign in page               # features/step_definitions/sign-in_steps.rb:30
+    And I should see "Invalid Email or password."        # features/step_definitions/signup_steps.rb:42
+
+  Scenario: Only users with correct password can sign in            # features/sign-in.feature:31
+    When I go to the sign in page                                   # features/step_definitions/sign-in_steps.rb:3
+    And I enter an incorrect password for an already signed up user # features/step_definitions/sign-in_steps.rb:17
+    And I click "Log in"                                            # features/step_definitions/sign-in_steps.rb:26
+    Then I should stay on the sign in page                          # features/step_definitions/sign-in_steps.rb:30
+    And I should see "Invalid Email or password."                   # features/step_definitions/signup_steps.rb:42
+
+3 scenarios (3 passed)
+18 steps (18 passed)
+0m0.174s
+Coverage report generated for Cucumber Features to /home/arefe/Desktop/public-health-app-v2/coverage. 15 / 29 LOC (51.72%) covered.
