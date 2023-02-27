@@ -56,11 +56,11 @@ class SurveysController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   #select language
   def select_language
     @survey = Survey.find(params[:id])
-    @languages = @survey.languages.split(',')
+    @languages = JSON.parse(@survey.languages)
   end
 
   private
