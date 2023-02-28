@@ -17,10 +17,6 @@ And /I enter an incorrect password for an already signed up user/ do
   fill_in "user[password]", with: "test123"
 end
 
-And /I fill in "(.*)" with "(.*)"/ do |field, value|
-  fill_in field, with:value
-end
-
 And /I click "Log in"/ do
   click_button "Log in"
 end

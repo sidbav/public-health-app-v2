@@ -31,8 +31,8 @@ And /I select "(.*?)" for "(.*?)"/ do |option, selector|
   select option, :from => selector
 end
 
-And /I click "Sign up"/ do
-  click_button "Sign up"
+And /I click "(.*)" button/ do |button|
+  click_button button
 end
 
 Then /I should be redirected to the welcome page/ do
@@ -104,8 +104,8 @@ And /User enters an already taken email and all other fields are valid/ do
   fill_in "user[password_confirmation]", with: "helloworld"
 end
 
-And /I click the "Log in" hyperlink/ do
-  click_link "Log in"
+And /I click the "(.*)" hyperlink/ do |link|
+  click_link link
 end
 
 Given /I am on the confirmation page/ do
@@ -126,6 +126,18 @@ When /I click the confirmation link in the email/ do
 end
 
 Then /I should be redirected to the login page with a flash message "([^"]*)"/ do |message|
+  #puts page
+  debugger;
   expect(page).to have_current_path(new_user_session_path)
   expect(page).to have_content(message)
+end
+
+Given /I previously registered for an account using the email "(.*)"/ do |email|
+  user = User.find_by(email: email)
+  expect(user).not_to eq(nil)
+  expect(user.confirmed_at).to eq(nil)
+end
+
+Then /I should be redirected to login/ do
+  expect(page).to have_current_path(new_user_session_path)
 end
