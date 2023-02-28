@@ -5,9 +5,26 @@ application up and running.
 
 Things you may want to cover:
 
-# MailCatcher:
+
+## Ruby version
+
+## System dependencies
+
+## Configuration
+
+## Database creation
+
+## Database initialization
+
+## How to run the test suite
+
+## Services (job queues, cache servers, search engines, etc.)
+
+## Deployment instructions
+
+## MailCatcher:
 INSTALL mailcatcher outside of ruby instance (in other words do not add it as a gem to this project) since it will lead to conflicts with this project's gems
-## MacOS Install
+### MacOS Install
 To install run the following command (MacOs):
 ```
 brew install mailcatcher
@@ -25,24 +42,5 @@ To stop running mailcatcher, please run the following:
 brew services stop mailcatcher
 ```
 
-## For windows, Linux, etc:
-Please follow the documentation on the official website:
-
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### For windows, Linux, etc:
+Please follow the documentation on the official [website](https://mailcatcher.me/)
