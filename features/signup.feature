@@ -34,6 +34,22 @@ Scenario: A User Signed up but has not verified their email yet.
   When I click the confirmation link in the email
   Then I should be redirected to the login page with a flash message "Your email address has been successfully confirmed."
 
+Scenario: A User Cannot get another confirmation token
+  Given I previously registered for an account using the email "testuser@test.com" and already verified my email
+  When I go to signup
+    And I click the "Didn't receive confirmation instructions?" hyperlink
+    And I fill in "Email" with "testuser@test.com"
+    And I click "Resend confirmation instructions" button
+  Then I should see "Email was already confirmed, please try signing in"
+
+Scenario: An email that was not previously registered cannot recieve a confirmation token
+  Given I previously did not register for an account with "not_a_user@test.com"
+  When I go to signup
+    And I click the "Didn't receive confirmation instructions?" hyperlink
+    And I fill in "Email" with "not_a_user@test.com"
+    And I click "Resend confirmation instructions" button
+  Then I should see "Email not found"
+
 Scenario: A user is on sign up page but clicks "Log in"
   When I go to signup
   And I click the "Log in" hyperlink

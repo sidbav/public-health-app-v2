@@ -139,3 +139,14 @@ end
 Then /I should be redirected to login/ do
   expect(page).to have_current_path(new_user_session_path)
 end
+
+Given /I previously registered for an account using the email "(.*)" and already verified my email/ do |email|
+  user = User.find_by(email: email)
+  expect(user).not_to eq(nil)
+  expect(user.confirmed_at).not_to eq(nil)
+end
+
+Given /I previously did not register for an account with "(.*)"/ do |email|
+  user = User.find_by(email: email)
+  expect(user).to eq(nil)
+end
