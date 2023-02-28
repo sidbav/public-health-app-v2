@@ -126,13 +126,11 @@ When /I click the confirmation link in the email/ do
 end
 
 Then /I should be redirected to the login page with a flash message "([^"]*)"/ do |message|
-  #puts page
-  debugger;
   expect(page).to have_current_path(new_user_session_path)
   expect(page).to have_content(message)
 end
 
-Given /I previously registered for an account using the email "(.*)"/ do |email|
+Given /I previously registered for an account using the email "(.*)" and did not verify my email/ do |email|
   user = User.find_by(email: email)
   expect(user).not_to eq(nil)
   expect(user.confirmed_at).to eq(nil)

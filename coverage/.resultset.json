@@ -9,18 +9,6 @@
           1,
           null,
           null,
-          1,
-          10,
-          10,
-          null,
-          null,
-          10,
-          10,
-          10,
-          null,
-          null,
-          10,
-          null,
           null
         ]
       },
@@ -28,28 +16,6 @@
         "lines": [
           1,
           1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          38,
-          null,
-          null,
-          null,
-          33,
-          null,
-          null,
-          null,
-          null,
           null
         ]
       },
@@ -74,6 +40,28 @@
       "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/surveys_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          42,
+          null,
+          null,
+          null,
+          37,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -310,6 +298,6 @@
         }
       }
     },
-    "timestamp": 1677607521
+    "timestamp": 1677619110
   }
 }
