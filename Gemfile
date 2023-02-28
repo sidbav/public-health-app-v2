@@ -90,6 +90,8 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'rails-controller-testing'
   gem 'simplecov', require: false
+  gem 'email_spec'
+  gem 'capybara-email'
 end
 
 group :production do

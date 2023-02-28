@@ -60,3 +60,9 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+
+require 'capybara/email'
+require 'email_spec'
+
+World(EmailSpec::Helpers)
+World(EmailSpec::Matchers)

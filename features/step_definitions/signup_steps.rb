@@ -108,4 +108,24 @@ And /I click the "Log in" hyperlink/ do
   click_link "Log in"
 end
 
+Given /I am on the confirmation page/ do
+  user = User.last
+  visit user_confirmation_path(confirmation_token: user.confirmation_token)
+end
 
+When /I open the email/ do
+  open_email(ActionMailer::Base.deliveries.last.to.first)
+end
+
+Then /The subject of the email should be "(.*)"/ do |subject|
+  expect(current_email.subject).to eq(subject)
+end
+
+When /I click the confirmation link in the email/ do
+  visit_in_email 'Confirm my account'
+end
+
+Then /I should be redirected to the login page with a flash message "([^"]*)"/ do |message|
+  expect(page).to have_current_path(new_user_session_path)
+  expect(page).to have_content(message)
+end
