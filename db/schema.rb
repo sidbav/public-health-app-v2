@@ -50,6 +50,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_23_021406) do
     t.string "zip", null: false
     t.string "phone_number", null: false
     t.date "date_of_birth", null: false
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

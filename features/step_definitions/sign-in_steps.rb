@@ -17,14 +17,15 @@ And /I enter an incorrect password for an already signed up user/ do
   fill_in "user[password]", with: "test123"
 end
 
-And /I fill in "(.*)" with "(.*)"/ do |field, value|
-  fill_in field, with:value
-end
-
 And /I click "Log in"/ do
   click_button "Log in"
 end
 
 Then /I should stay on the sign in page/ do
   expect(current_path).to eq "/users/sign_in"
+end
+
+And /I enter correct email and password for a not confirmed patient/ do
+  fill_in "user[email]", with: "notconfirmed@test.com"
+  fill_in "user[password]", with: "Test123"
 end

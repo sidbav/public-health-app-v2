@@ -40,13 +40,6 @@ Rails.application.configure do
   # Store uploaded files on the local file system in a temporary directory.
   config.active_storage.service = :test
 
-  config.action_mailer.perform_caching = false
-
-  # Tell Action Mailer not to deliver emails to the real world.
-  # The :test delivery method accumulates sent emails in the
-  # ActionMailer::Base.deliveries array.
-  config.action_mailer.delivery_method = :test
-
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
@@ -61,4 +54,10 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_caching = false
 end
