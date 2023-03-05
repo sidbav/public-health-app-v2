@@ -100,7 +100,7 @@ Rails.application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :user_name            => ENV["PUBLIC_HEALTH_EMAIL"],
-    :password             => ENV["PUBLIC_HEALTH_EMAIL_PASSWORD"]
+    :password             => ENV["PUBLIC_HEALTH_EMAIL_PASSWORD"],
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
