@@ -92,7 +92,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Mailer Settings
-  config.action_mailer.default_url_options = { :host => 'healthapp.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'healthapp.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
   # SMTP settings for gmail
