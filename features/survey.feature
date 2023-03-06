@@ -19,7 +19,7 @@ Background: surveys and users in database
 Scenario: User is not logged in and tries to access the survey
   Given I am not logged in
   When I visit the home screen
-  Then I should see the message "Please sign in to fill survey"
+  Then I should be redirected to the login page with a flash message "You need to sign in or sign up before continuing."
 
 Scenario: User is logged in and can access the survey
   Given I am logged in
