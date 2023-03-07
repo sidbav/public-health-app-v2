@@ -53,3 +53,33 @@ Scenario: Non authenticated users should be redirected to the sign in page after
     And I enter valid patient signup information
     And I click "Sign up" button
   Then I should be redirected to login
+
+  Scenario: Forgot password feature for confirmed emails
+  When I go to login
+    And I click the "Forgot your password?" hyperlink
+    And I enter a confirmed email
+    And I click "Send me reset password instructions" button
+  Then I should be redirected to the login page with a flash message "You will receive an email with instructions on how to reset your password in a few minutes."
+  When I open the email
+  Then The subject of the email should be "Reset password instructions"
+  When I click the change my password link in the email
+  Then I should be redirected to the change your password page
+  When I enter a valid password
+  Then I should be redirected to the home page with a flash message "Your password has been changed successfully. You are now signed in.."
+
+  Scenario: Forgot password feature for non confirmed emails
+  When I go to login
+    And I click the "Forgot your password?" hyperlink
+    And I enter a non confirmed email
+    And I click "Send me reset password instructions" button
+  Then I should see "Email not found"
+    And I should see "Forgot your password?"
+
+  Scenario: Forgot password page hyperlinks
+  Given I am on forgot password page
+  When I click the "Log in" hyperlink
+  Then I should see "Log in"
+  When I click the "Sign up" hyperlink
+  Then I should see "Sign up"
+  When I click the "Didn't receive confirmation instructions?" hyperlink
+  Then I should see "Resend confirmation instructions"
