@@ -29,3 +29,15 @@ And /I enter correct email and password for a not confirmed patient/ do
   fill_in "user[email]", with: "notconfirmed@test.com"
   fill_in "user[password]", with: "Test123"
 end
+
+When(/^I visit home page$/) do
+  visit '/'
+end
+
+When(/^I visit survey page$/) do
+  visit '/surveys'
+end
+
+When(/^I visit question page$/) do
+  visit '/questions'
+end

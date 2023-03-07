@@ -13,28 +13,43 @@ Background: Users in database
 
 Scenario: Signed up users providing correct credentials can sign in
   When I go to the sign in page
-  And I enter the correct email and password for a user who is signed up
-  And I click "Log in"
+    And I enter the correct email and password for a user who is signed up
+    And I click "Log in"
   Then I should be redirected to the welcome page
-  And I should see "Signed in successfully."
+    And I should see "Signed in successfully."
 
 Scenario: Only users who signed up can sign in
   When I go to the sign in page
-  And I enter an email for a user who is not signed up
-  And I click "Log in"
+    And I enter an email for a user who is not signed up
+    And I click "Log in"
   Then I should stay on the sign in page
-  And I should see "Invalid Email or password."
+    And I should see "Invalid Email or password."
 
 Scenario: Only users with correct password can sign in
   When I go to the sign in page
-  And I enter an incorrect password for an already signed up user
-  And I click "Log in"
+    And I enter an incorrect password for an already signed up user
+    And I click "Log in"
   Then I should stay on the sign in page
-  And I should see "Invalid Email or password."
+    And I should see "Invalid Email or password."
 
 Scenario: Only Confirmed Users Can sign in
   When I go to the sign in page
-  And I enter correct email and password for a not confirmed patient
-  And I click "Log in"
+    And I enter correct email and password for a not confirmed patient
+    And I click "Log in"
   Then I should stay on the sign in page
-  And I should see "You have to confirm your email address before continuing."
+    And I should see "You have to confirm your email address before continuing."
+
+Scenario: Non authenticated users should be redirected to the sign in page after accessing each resource
+  Given I am not logged in
+  When I visit home page
+  Then I should be redirected to login
+  When I visit survey page
+  Then I should be redirected to login
+  When I visit question page
+  Then I should be redirected to login
+
+  Scenario: Users should be redirected to sign in page after sign up
+  When I go to signup
+    And I enter valid patient signup information
+    And I click "Sign up" button
+  Then I should be redirected to login
