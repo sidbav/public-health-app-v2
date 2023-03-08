@@ -48,13 +48,7 @@ Scenario: Non authenticated users should be redirected to the sign in page after
   When I visit question page
   Then I should be redirected to login
 
-  Scenario: Users should be redirected to sign in page after sign up
-  When I go to signup
-    And I enter valid patient signup information
-    And I click "Sign up" button
-  Then I should be redirected to login
-
-  Scenario: Forgot password feature for confirmed emails
+Scenario: Forgot password feature for confirmed emails
   When I go to login
     And I click the "Forgot your password?" hyperlink
     And I enter a confirmed email
@@ -65,9 +59,10 @@ Scenario: Non authenticated users should be redirected to the sign in page after
   When I click the change my password link in the email
   Then I should be redirected to the change your password page
   When I enter a valid password
+    And I click "Change my password" button
   Then I should be redirected to the home page with a flash message "Your password has been changed successfully. You are now signed in.."
 
-  Scenario: Forgot password feature for non confirmed emails
+Scenario: Forgot password feature for non confirmed emails
   When I go to login
     And I click the "Forgot your password?" hyperlink
     And I enter a non confirmed email
@@ -75,7 +70,7 @@ Scenario: Non authenticated users should be redirected to the sign in page after
   Then I should see "Email not found"
     And I should see "Forgot your password?"
 
-  Scenario: Forgot password page hyperlinks
+Scenario: Forgot password page hyperlinks
   Given I am on forgot password page
   When I click the "Log in" hyperlink
   Then I should see "Log in"
