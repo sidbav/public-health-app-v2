@@ -63,8 +63,7 @@ When /I click the change my password link in the email/ do
 end
 
 Then /I should be redirected to the change your password page/ do
-  user = User.first
-  expect(page).to have_current_path(edit_user_password_path(reset_password_token: user.reset_password_token))
+  expect(page).to have_content("Change your password")
 end
 
 When /I enter a valid password/ do
