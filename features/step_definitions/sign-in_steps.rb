@@ -29,3 +29,49 @@ And /I enter correct email and password for a not confirmed patient/ do
   fill_in "user[email]", with: "notconfirmed@test.com"
   fill_in "user[password]", with: "Test123"
 end
+
+When(/^I visit home page$/) do
+  visit '/'
+end
+
+When(/^I visit survey page$/) do
+  visit '/surveys'
+end
+
+When(/^I visit question page$/) do
+  visit '/questions'
+end
+
+When /I go to login/ do
+  visit '/users/sign_in'
+end
+
+And /I enter a confirmed email/ do
+  fill_in "user[email]", with: "testuser@test.com"
+end
+
+And /I enter a non confirmed email/ do
+  fill_in "user[email]", with: "testuser2@test.com"
+end
+
+Given /I am on forgot password page/ do
+  visit '/users/password/new'
+end
+
+When /I click the change my password link in the email/ do
+  visit_in_email 'Change my password'
+end
+
+Then /I should be redirected to the change your password page/ do
+  expect(page).to have_content("Change your password")
+end
+
+When /I enter a valid password/ do
+  fill_in "user[password]", with: "Test123"
+  fill_in "user[password_confirmation]", with: "Test123"
+end
+
+Then /I should be redirected to the home page with a flash message "(.*)"/ do |message|
+  expect(page).to have_current_path("/")
+  expect(page).to have_content(message)
+end

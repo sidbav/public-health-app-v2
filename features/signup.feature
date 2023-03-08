@@ -28,7 +28,7 @@ Scenario: A User Signed up but has not verified their email yet.
     And I fill in "Email" with "testuser2@test.com"
     And I click "Resend confirmation instructions" button
   Then I should be redirected to login
-    And I should see "You will receive an email with instructions for how to confirm your email address in a few minutes."
+    And  I should be redirected to the login page with a flash message "You will receive an email with instructions for how to confirm your email address in a few minutes."
   When I open the email
   Then The subject of the email should be "Email Confirmation Instructions"
   When I click the confirmation link in the email
