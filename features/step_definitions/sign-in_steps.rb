@@ -68,9 +68,8 @@ Then /I should be redirected to the change your password page/ do
 end
 
 When /I enter a valid password/ do
-  puts current_path
-  #fill_in "user[password]", with: "Test123"
-  #fill_in "user[password_confirmation]", with: "Test123"
+  fill_in "user[password]", with: "Test123"
+  fill_in "user[password_confirmation]", with: "Test123"
 end
 
 Then /I should be redirected to the home page with a flash message "([^"]*)"/ do |message|
