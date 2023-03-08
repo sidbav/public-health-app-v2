@@ -63,7 +63,7 @@ When /I click the change my password link in the email/ do
 end
 
 Then /I should be redirected to the change your password page/ do
-  user = User.last
+  user = User.first
   expect(page).to have_current_path(edit_user_password_path(reset_password_token: user.reset_password_token))
 end
 
@@ -72,7 +72,7 @@ When /I enter a valid password/ do
   fill_in "user[password_confirmation]", with: "Test123"
 end
 
-Then /I should be redirected to the home page with a flash message "([^"]*)"/ do |message|
-  expect(page).to have_current_path(root)
+Then /I should be redirected to the home page with a flash message "(.*)"/ do |message|
+  expect(page).to have_current_path("/")
   expect(page).to have_content(message)
 end

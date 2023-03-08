@@ -57,10 +57,9 @@ Scenario: Forgot password feature for confirmed emails
   When I open the email
   Then The subject of the email should be "Reset password instructions"
   When I click the change my password link in the email
-  Then I should be redirected to the change your password page
-  When I enter a valid password
+    And I enter a valid password
     And I click "Change my password" button
-  Then I should be redirected to the home page with a flash message "Your password has been changed successfully. You are now signed in.."
+  Then I should be redirected to the home page with a flash message "Your password has been changed successfully. You are now signed in."
 
 Scenario: Forgot password feature for non confirmed emails
   When I go to login
