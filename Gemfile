@@ -81,7 +81,6 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem "rubycritic", require: false
-  gem 'sqlite3'
   gem 'ZenTest'
 end
 
@@ -94,7 +93,6 @@ group :test do
   gem 'capybara-email'
 end
 
-group :production do
-  gem 'pg'
-end
+
+gem 'pg'
 

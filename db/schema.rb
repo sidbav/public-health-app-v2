@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_02_23_021406) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "questions", force: :cascade do |t|
     t.integer "survey_id", null: false
     t.string "language", null: false
@@ -29,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_23_021406) do
     t.string "survey_category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "languages", null: false
+    t.text "languages", null: false
     t.index ["survey_name"], name: "index_surveys_on_survey_name", unique: true
   end
 
@@ -50,10 +53,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_23_021406) do
     t.string "zip", null: false
     t.string "phone_number", null: false
     t.date "date_of_birth", null: false
-    t.string "confirmation_token"
+    t.text "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
+    t.text "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

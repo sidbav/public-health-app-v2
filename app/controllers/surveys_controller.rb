@@ -61,7 +61,7 @@ class SurveysController < ApplicationController
   #select language
   def select_language
     @survey = Survey.find(params[:id])
-    @languages = JSON.parse(@survey.languages)
+    @languages = @survey.languages
   end
 
   private
