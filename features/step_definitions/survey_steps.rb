@@ -54,16 +54,53 @@ When(/^I click on the survey link$/) do
   click_link("Survey")
 end
 
+Given (/^I am on survey page$/) do
+  visit '/surveys'
+end
+
 #done
-When(/^I click on the "Take Survey" link in row (\d+)$/) do |survey_number|
-  # code to click on the "Take Survey" link in the specified row
-  row = all('table tr')[survey_number.to_i]
-  within(row) do
-    click_link("Take Survey")
+# When( /^I click on the Take survey link in row (\d+)$/) do |link_text, row_number|
+#   within("table tr:nth-child(#{row_number}) td:first-child") do
+#     click_link link_text
+#   end
+# #done
+# When(/^I click on the "Take Survey" link in row (\d+)$/) do |survey_number|
+#   # code to click on the "Take Survey" link in the specified row
+#   row = all('table tr')[survey_number.to_i]
+#   within(row) do
+#     click_link("Take Survey")
+#   end
+# end
+
+# When(/^I click on the take survey on row (\d+)$/) do |row_number|
+#   within("table tr:nth-child(#{row_number}) td:first-child") do
+#     click_link "Take Survey"
+#   end
+# end
+
+# When(/^I click on the take survey on any row/) do |row_number|
+#   row = all('table tr')[row_number.to_i]
+#   within(row) do
+#     click_link "Take Survey"
+#   end
+# end
+When(/^I click on the take survey on any row$/) do
+  if page.has_css?("#surveys table tbody tr:first-child td:last-child a", text: "Take Survey")
+    within("#surveys table tbody tr:first-child") do
+      click_link "Take Survey"
+    end
+  else
+    raise "No survey table found on page"
   end
 end
+
 
 Then(/^I should see (\d+) links to choose/) do |num_links|
   expect(page).to have_selector('a.choice-link', count: num_links)
 end
 
+Then(/^"I should see "English", "Spanish", "Chinese"/) do |link1, link2, link3|
+  expect(page).to have_link(link1)
+  expect(page).to have_link(link2)
+  expect(page).to have_link(link3)
+end

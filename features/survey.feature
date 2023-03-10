@@ -31,4 +31,12 @@ Scenario: User can view list of surveys
   When I click on the survey link
   Then I should see a table Surveys
 
+Scenario: User can select survey from surveys
+  Given I am on survey page
+  When I click on the take survey on any row
+  Then I should see 3 links to choose
+  And I should see "English", "Spanish", "Chinese"
+ 
+
+
 
