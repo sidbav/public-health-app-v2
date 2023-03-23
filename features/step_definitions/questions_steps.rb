@@ -30,10 +30,15 @@ end
 #   click_button "Submit"
 # end
 
-When("I am on language page") do
-  survey = Survey.first # or use any other way to get a survey object
-  visit select_language_survey_path(survey)
+When ("I am on language page") do
+  # code to check if link is displayed
+  expect(page).to have_link("languages", href: "/questions")
 end
+
+# When("I am on language page") do
+#   survey = Survey.first # or use any other way to get a survey object
+#   visit select_language_survey_path(survey)
+# end
 
 # When ("I am on language page") do
 #   visit 'select_language'
