@@ -1,6 +1,12 @@
+# Given /the following surveys exist/ do |surveys_table|
+#   surveys_table.hashes.each do |survey|
+#     Survey.create survey
+#   end
+# end
 Given /the following surveys exist/ do |surveys_table|
   surveys_table.hashes.each do |survey|
-    Survey.create survey
+    languages = survey['languages'].split(',').map(&:strip)
+    Survey.create survey.merge(languages: languages)
   end
 end
 
@@ -58,11 +64,18 @@ Given (/^I am on survey page$/) do
   visit '/surveys'
 end
 
-#done
-# When( /^I click on the Take survey link in row (\d+)$/) do |link_text, row_number|
-#   within("table tr:nth-child(#{row_number}) td:first-child") do
-#     click_link link_text
-#   end
+When(/^I click on the "Take Survey" link on the first row$/) do
+  within("table tbody tr:nth-child(1)") do
+    click_on "Take Survey"
+  end
+end
+
+Then(/^I should see the "English", "Spanish", and "Chinese" links$/) do
+  expect(page).to have_link("English")
+  expect(page).to have_link("Spanish")
+  expect(page).to have_link("Chinese")
+end
+
 # #done
 # When(/^I click on the "Take Survey" link in row (\d+)$/) do |survey_number|
 #   # code to click on the "Take Survey" link in the specified row
@@ -84,15 +97,15 @@ end
 #     click_link "Take Survey"
 #   end
 # end
-When(/^I click on the take survey on any row$/) do
-  if page.has_css?("#surveys table tbody tr:first-child td:last-child a", text: "Take Survey")
-    within("#surveys table tbody tr:first-child") do
-      click_link "Take Survey"
-    end
-  else
-    raise "No survey table found on page"
-  end
-end
+# When(/^I click on the take survey on any row$/) do
+#   if page.has_css?("#surveys table tbody tr:first-child td:last-child a", text: "Take Survey")
+#     within("#surveys table tbody tr:first-child") do
+#       click_link "Take Survey"
+#     end
+#   else
+#     raise "No survey table found on page"
+#   end
+# end
 
 
 Then(/^I should see (\d+) links to choose/) do |num_links|
