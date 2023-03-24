@@ -24,8 +24,11 @@ Given the following questions exist:
 
 Scenario: User can view the questions
   Given I am logged in
-  When I am on language page
-  And I select language "English"
+  When I click on the survey link
+  Then I should see a table Surveys
+  When I click on the "Take Survey" link on the first row
+  Then I should see the "English", "Spanish", and "Chinese" links
+  And I click on the "English" link
   Then I should be able to see the questions in English
 
 
