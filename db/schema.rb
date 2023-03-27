@@ -10,48 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_23_021406) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_26_162906) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "questions", force: :cascade do |t|
-    t.integer "survey_id", null: false
-    t.string "language", null: false
+    t.bigint "survey_id", null: false
+    t.text "language", null: false
     t.text "question_text", null: false
-    t.text "options_list", null: false
-    t.integer "option_points_list", null: false
-    t.integer "question_number", null: false
+    t.text "options_list", null: false, array: true
+    t.integer "option_points_list", null: false, array: true
+    t.text "question_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "is_parent_of_field"
+    t.text "option_selected_to_display_child"
+    t.boolean "has_parent_field", default: false
     t.index ["survey_id", "language"], name: "index_questions_on_survey_id_and_language"
     t.index ["survey_id"], name: "index_questions_on_survey_id"
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.string "survey_name", default: "", null: false
-    t.string "survey_category", null: false
+    t.text "survey_name", default: "", null: false
+    t.text "survey_category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "languages", null: false
+    t.text "languages", null: false, array: true
     t.index ["survey_name"], name: "index_surveys_on_survey_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
+    t.text "email", default: "", null: false
+    t.text "encrypted_password", default: "", null: false
+    t.text "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.string "address_line_1", null: false
-    t.string "address_line_2"
-    t.string "city", null: false
-    t.string "state", null: false
-    t.string "zip", null: false
-    t.string "phone_number", null: false
+    t.text "first_name", null: false
+    t.text "last_name", null: false
+    t.text "address_line_1", null: false
+    t.text "address_line_2"
+    t.text "city", null: false
+    t.text "state", null: false
+    t.text "zip", null: false
+    t.text "phone_number", null: false
     t.date "date_of_birth", null: false
     t.text "confirmation_token"
     t.datetime "confirmed_at"
