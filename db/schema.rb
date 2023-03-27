@@ -30,6 +30,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_26_162906) do
     t.index ["survey_id"], name: "index_questions_on_survey_id"
   end
 
+  create_table "responses", force: :cascade do |t|
+    t.bigint "survey_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "question_number"
+    t.text "response"
+    t.integer "response_score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_responses_on_survey_id"
+    t.index ["user_id"], name: "index_responses_on_user_id"
+  end
+
   create_table "surveys", force: :cascade do |t|
     t.text "survey_name", default: "", null: false
     t.text "survey_category", null: false
@@ -65,4 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_26_162906) do
   end
 
   add_foreign_key "questions", "surveys"
+  add_foreign_key "responses", "surveys"
+  add_foreign_key "responses", "users"
 end
