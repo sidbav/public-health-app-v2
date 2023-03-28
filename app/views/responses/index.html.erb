@@ -3,9 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Survey ID</th>
-      <th>User ID</th>
       <th>Question Number</th>
       <th>Response</th>
       <th>Response Score</th>
@@ -16,15 +13,12 @@
   <tbody>
     <% @responses.each do |response| %>
       <tr>
-        <td><%= response.id %></td>
-        <td><%= response.survey_id %></td>
-        <td><%= response.user_id %></td>
         <td><%= response.question_number %></td>
         <td><%= response.response %></td>
         <td><%= response.response_score %></td>
-        <td><%= link_to 'Show', response %></td>
-        <td><%= link_to 'Edit', edit_response_path(response) %></td>
-        <td><%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', survey_response_path(@survey, response) %></td>
+        <td><%= link_to 'Edit', edit_survey_response_path(@survey, response) %></td>
+        <td><%= link_to 'Destroy', survey_response_path(@survey, response), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +26,5 @@
 
 <br>
 
-<%= link_to 'New Response', new_survey_response_path %>
+<%= link_to 'New Response', new_survey_response_path(@survey) %>
+

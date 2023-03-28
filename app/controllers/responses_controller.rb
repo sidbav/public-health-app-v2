@@ -1,5 +1,6 @@
 class ResponsesController < ApplicationController
     def index
+        @survey = Survey.find(params[:survey_id])
         @responses = Response.where(survey_id: params[:survey_id], user_id: params[:user_id])
     end
     
