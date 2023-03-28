@@ -6,13 +6,99 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
-# survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
+#seed users
+#seed users
+user = User.new(
+    email: 'user1@example.com',
+    password: '123456',
+    password_confirmation: '123456',
+    first_name: 'User1',
+    last_name: 'User1',
+    address_line_1: 'address',
+    address_line_2: 'address',
+    city: 'city',
+    state: 'state',
+    zip: '12345',
+    phone_number: '1234567890',
+    date_of_birth: Date.new(1990, 1, 1),
+    confirmed_at: Time.now
+  )
+  user.skip_confirmation_notification! # Skip sending email confirmation
+  user.save!
+
+  user = User.new(
+    email: 'user2@example.com',
+    password: '123456',
+    password_confirmation: '123456',
+    first_name: 'User2',
+    last_name: 'User2',
+    address_line_1: 'address',
+    address_line_2: 'address',
+    city: 'city',
+    state: 'state',
+    zip: '12345',
+    phone_number: '1234567890',
+    date_of_birth: Date.new(1990, 1, 1),
+    confirmed_at: Time.now
+  )
+  user.skip_confirmation_notification! # Skip sending email confirmation
+  user.save!
+
+  user = User.new(
+    email: 'user3@example.com',
+    password: '123456',
+    password_confirmation: '123456',
+    first_name: 'User3',
+    last_name: 'User3',
+    address_line_1: 'address',
+    address_line_2: 'address',
+    city: 'city',
+    state: 'state',
+    zip: '12345',
+    phone_number: '1234567890',
+    date_of_birth: Date.new(1990, 1, 1)
+  )
+  user.save!
+
+#seed surveys
+ survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
+ survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
+ survey3 = Survey.create(survey_name: "Testing the Hide/Show Functionality", survey_category: "Testing Purposes!", languages: ['English'])
 
 #seed questions
-#survey3 = Survey.create(survey_name: "Testing the Hide/Show Functionality", survey_category: "Testing Purposes!", languages: ['English'])
-
 questions = [
+  {
+    survey_id: 1,
+    language: "English",
+    question_text: "Do you have children under the age of 18 in your household?",
+    options_list: ["No", "Yes"],
+    option_points_list: [0, 1],
+    question_number: 1
+  },
+  {
+    survey_id: 1,
+    language: "English",
+    question_text: "Which of these statements best describes the food eaten in your household in the last 12 months?",
+    options_list: ["Enough of the kinds of food we want to eat", "Enough, but not always the kinds of food we want", "Sometimes not enough to eat", "Often not enough to eat", "I don't know, or I refuse to answer"],
+    option_points_list: [0, 1, 2, 3, 4, 5],
+    question_number: 2
+  },
+  {
+    survey_id: 1,
+    language: "Spanish",
+    question_text: "Tiene hijos menores de 18 años en su hogar?",
+    options_list: ["No", "Si"],
+    option_points_list: [0, 1],
+    question_number: 1
+  },
+  {
+    survey_id: 1,
+    language: "Spanish",
+    question_text: "Cuál de las siguientes declaraciones describe mejor la situación alimentaria en su hogar en los últimos 12 meses?",
+    options_list: ["Siempre comemos lo suficiente y los tipos de alimentos que deseamos", "Comemos lo suficiente pero no siempre lo que deseamos", "A veces no comemos lo suficiente", "Frecuentemente no comemos lo suficiente", "No sé, o me niego a responder"],
+    option_points_list: [1, 2, 3, 4, 5],
+    question_number: 2
+  },
   {
     survey_id: 3,
     language: "English",
@@ -57,3 +143,31 @@ questions.each do |question|
     option_selected_to_display_child: question[:option_selected_to_display_child],
   )
 end
+
+# seed resposes
+survey = Survey.first
+user = User.first
+
+response1 = Response.create(
+  survey: survey,
+  user: user,
+  question_number: 1,
+  response: "Yes",
+  response_score: 3
+)
+
+response2 = Response.create(
+  survey: survey,
+  user: user,
+  question_number: 2,
+  response: "No",
+  response_score: 1
+)
+
+response3 = Response.create(
+  survey: survey,
+  user: user,
+  question_number: 3,
+  response: "Not sure",
+  response_score: 2
+)
