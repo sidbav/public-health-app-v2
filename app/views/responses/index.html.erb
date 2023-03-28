@@ -4,7 +4,6 @@
     <%= submit_tag "Change Language" %>
   <% end %>
   
-
 <table>
   <thead>
     <tr>
@@ -19,7 +18,7 @@
     <% @responses.each do |response| %>
       <tr>
         <td><%= @questions.where(question_number: response.question_number).first.question_text %></td>
-        <td><%= response.response %></td>
+        <td><%= response.response_option_number.nil? ? "" : @questions.where(question_number: response.question_number).first.options_list[response.response_option_number] %></td>
         <td><%= response.response_score %></td>
         <td><%= link_to 'Show', survey_response_path(@survey, response) %></td>
         <td><%= link_to 'Edit', edit_survey_response_path(@survey, response) %></td>
