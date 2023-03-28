@@ -1,9 +1,14 @@
 <h1>Responses</h1>
+<%= form_tag survey_responses_path(@survey, language: @language), method: :get do %>
+    <%= select_tag :language, options_for_select(@survey.languages, @language) %>
+    <%= submit_tag "Change Language" %>
+  <% end %>
+  
 
 <table>
   <thead>
     <tr>
-      <th>Question Number</th>
+      <th>Question Text</th>
       <th>Response</th>
       <th>Response Score</th>
       <th colspan="3"></th>
@@ -13,7 +18,7 @@
   <tbody>
     <% @responses.each do |response| %>
       <tr>
-        <td><%= response.question_number %></td>
+        <td><%= @questions.where(question_number: response.question_number).first.question_text %></td>
         <td><%= response.response %></td>
         <td><%= response.response_score %></td>
         <td><%= link_to 'Show', survey_response_path(@survey, response) %></td>
