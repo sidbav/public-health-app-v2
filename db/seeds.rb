@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
- survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
- survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
+ #survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
+ #survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
 
 #seed questions
 questions = [
@@ -65,21 +65,13 @@ response1 = Response.create(
   user: user,
   question_number: 1,
   response: "Yes",
-  response_score: 3
+  response_score: 1
 )
 
 response2 = Response.create(
   survey: survey,
   user: user,
   question_number: 2,
-  response: "No",
-  response_score: 1
-)
-
-response3 = Response.create(
-  survey: survey,
-  user: user,
-  question_number: 3,
-  response: "Not sure",
-  response_score: 2
+  response: "Enough of the kinds of food we want to eat",
+  response_score: 0
 )
