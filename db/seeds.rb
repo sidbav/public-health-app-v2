@@ -64,7 +64,7 @@ response1 = Response.create(
   survey: survey,
   user: user,
   question_number: 1,
-  response: "Yes",
+  response_option_number: 1,
   response_score: 1
 )
 
@@ -72,6 +72,6 @@ response2 = Response.create(
   survey: survey,
   user: user,
   question_number: 2,
-  response: "Enough of the kinds of food we want to eat",
+  response_option_number: 0,
   response_score: 0
 )
