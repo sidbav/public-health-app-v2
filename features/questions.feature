@@ -42,7 +42,7 @@ Scenario: Hiding and Viewing Questions Functionality
   When I click on the "Take Survey" link on the third row
   And I click on the "English" link
   Then I should not see "1A."
-  When I select Option Yes for Question 1 for the Testing the Hide/Show Functionality Survey
+  When I select Option "Yes" for Question 1 for the Testing the Hide/Show Functionality Survey
     Then I should see "1A."
-  When I select Option No for Question 1 for the Testing the Hide/Show Functionality Survey
+  When I select Option "No" for Question 1 for the Testing the Hide/Show Functionality Survey
     Then I should not see "1A."

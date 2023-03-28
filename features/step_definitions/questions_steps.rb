@@ -36,15 +36,7 @@ And /I should not see "(.*)"/ do |message|
   expect(page).not_to have_content(message)
 end
 
-When /I select Option Yes for Question 1 for the Testing the Hide\/Show Functionality Survey/ do
-  question_div = all(:xpath, '//div[1]')[1]
-  within question_div do
-    radio_button = find("input[type='radio'][value='Yes']")
-    radio_button.click
-  end
-end
-
-When /I select Option No for Question 1 for the Testing the Hide\/Show Functionality Survey/ do
-  radio_button = page.all('input[type="radio"]').find { |radio| radio.value == "No" }
+When /I select Option "(.*)" for Question 1 for the Testing the Hide\/Show Functionality Survey/ do |option|
+  radio_button = page.all('input[type="radio"]').find { |radio| radio.value == option }
   radio_button.click
 end
