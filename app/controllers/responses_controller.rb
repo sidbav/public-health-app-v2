@@ -2,6 +2,8 @@ class ResponsesController < ApplicationController
     def index
         @survey = Survey.find(params[:survey_id])
         @responses = Response.where(survey_id: params[:survey_id], user_id: current_user.id)
+        @language = params[:language] || "English"
+        @questions = Question.where(survey_id: params[:survey_id], language: @language)
     end
     
     def new
@@ -35,6 +37,6 @@ class ResponsesController < ApplicationController
     private
   
     def response_params
-      params.require(:response).permit(:survey_id, :user_id, :question_number, :response)
+      params.require(:response).permit(:survey_id, :user_id, :question_number, :response, :language)
     end
   end  
