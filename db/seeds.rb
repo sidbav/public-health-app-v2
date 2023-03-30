@@ -6,8 +6,62 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
- #survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
- #survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
+#seed users
+user = User.new(
+    email: 'user1@example.com',
+    password: '123456',
+    password_confirmation: '123456',
+    first_name: 'User1',
+    last_name: 'User1',
+    address_line_1: 'address',
+    address_line_2: 'address',
+    city: 'city',
+    state: 'state',
+    zip: '12345',
+    phone_number: '1234567890',
+    date_of_birth: Date.new(1990, 1, 1),
+    confirmed_at: Time.now
+  )
+  user.skip_confirmation_notification! # Skip sending email confirmation
+  user.save!
+
+  user = User.new(
+    email: 'user2@example.com',
+    password: '123456',
+    password_confirmation: '123456',
+    first_name: 'User2',
+    last_name: 'User2',
+    address_line_1: 'address',
+    address_line_2: 'address',
+    city: 'city',
+    state: 'state',
+    zip: '12345',
+    phone_number: '1234567890',
+    date_of_birth: Date.new(1990, 1, 1),
+    confirmed_at: Time.now
+  )
+  user.skip_confirmation_notification! # Skip sending email confirmation
+  user.save!
+
+  user = User.new(
+    email: 'user3@example.com',
+    password: '123456',
+    password_confirmation: '123456',
+    first_name: 'User3',
+    last_name: 'User3',
+    address_line_1: 'address',
+    address_line_2: 'address',
+    city: 'city',
+    state: 'state',
+    zip: '12345',
+    phone_number: '1234567890',
+    date_of_birth: Date.new(1990, 1, 1)
+  )
+  user.save!
+
+#seed surveys
+ survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
+ survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
 
 #seed questions
 questions = [
