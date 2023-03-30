@@ -96,3 +96,5 @@ end
 
 gem 'pg'
 
+gem 'jquery-rails'
+gem 'selenium-webdriver'

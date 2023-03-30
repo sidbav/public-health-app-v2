@@ -10,39 +10,38 @@
 # survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
 
 #seed questions
+#survey3 = Survey.create(survey_name: "Testing the Hide/Show Functionality", survey_category: "Testing Purposes!", languages: ['English'])
+
 questions = [
   {
-    survey_id: 1,
+    survey_id: 3,
     language: "English",
-    question_text: "Do you have children under the age of 18 in your household?",
-    options_list: ["No", "Yes"],
-    option_points_list: [0, 1],
-    question_number: 1
+    question_text: "Are you 18 years of age or older?",
+    options_list: ["Yes", "No"],
+    option_points_list: [1, 0],
+    question_number: "1",
+    has_parent_field: false,
+    is_parent_of_field: "1A",
+    option_selected_to_display_child: "Yes",
   },
   {
-    survey_id: 1,
+    survey_id: 3,
     language: "English",
-    question_text: "Which of these statements best describes the food eaten in your household in the last 12 months?",
-    options_list: ["Enough of the kinds of food we want to eat", "Enough, but not always the kinds of food we want", "Sometimes not enough to eat", "Often not enough to eat", "I don't know, or I refuse to answer"],
-    option_points_list: [0, 1, 2, 3, 4, 5],
-    question_number: 2
+    question_text: "You should only see this question if response was \"Yes\" to the previous question",
+    options_list: ["Yea", "Maybe"],
+    option_points_list: [2, 1, 0],
+    question_number: "1A",
+    has_parent_field: true,
   },
   {
-    survey_id: 1,
-    language: "Spanish",
-    question_text: "Tiene hijos menores de 18 años en su hogar?",
-    options_list: ["No", "Si"],
-    option_points_list: [0, 1],
-    question_number: 1
+    survey_id: 3,
+    language: "English",
+    question_text: "You should see this question anyways!",
+    options_list: ["Yes I do", "No I dont"],
+    option_points_list: [1, 0],
+    question_number: "2",
+    has_parent_field: false
   },
-  {
-    survey_id: 1,
-    language: "Spanish",
-    question_text: "Cuál de las siguientes declaraciones describe mejor la situación alimentaria en su hogar en los últimos 12 meses?",
-    options_list: ["Siempre comemos lo suficiente y los tipos de alimentos que deseamos", "Comemos lo suficiente pero no siempre lo que deseamos", "A veces no comemos lo suficiente", "Frecuentemente no comemos lo suficiente", "No sé, o me niego a responder"],
-    option_points_list: [1, 2, 3, 4, 5],
-    question_number: 2
-  }
 ]
 
 questions.each do |question|
@@ -52,6 +51,9 @@ questions.each do |question|
     question_text: question[:question_text],
     options_list: question[:options_list],
     option_points_list: question[:option_points_list],
-    question_number: question[:question_number]
+    question_number: question[:question_number],
+    has_parent_field: question[:has_parent_field],
+    is_parent_of_field: question[:is_parent_of_field],
+    option_selected_to_display_child: question[:option_selected_to_display_child],
   )
 end

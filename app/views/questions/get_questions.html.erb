@@ -2,13 +2,42 @@
 <h2>Language: <%= @language %></h2>
 
 <% @questions.each do |question| %>
-  <h3><%= question.question_number %>. <%= question.question_text %></h3>
-  <ul>
-    <% question.options_list.each_with_index do |option, index| %>
-      <li>
-        <%= radio_button_tag "answers[#{question.id}]", index, false %>
-        <%= label_tag "answers[#{question.id}][#{index}]", option %>
-      </li>
+  <% if question.has_parent_field == false %>
+    <div id=<%= question.question_number %>>
+  <%else %>
+    <div id=<%= question.question_number %> style="display:none" >
+  <% end %>
+    <h3><%= question.question_number %>. <%= question.question_text %></h3>
+      <% question.options_list.each_with_index do |option, index| %>
+
+      <% if question.is_parent_of_field == nil %>
+        <%= radio_button_tag "answers[#{question.id}]", option, false%>
+      <%else %>
+        <% if option == question.option_selected_to_display_child %>
+          <%= radio_button_tag "answers[#{question.id}]", option, false, data: { show_question: question.is_parent_of_field } %>
+        <%else %>
+          <%= radio_button_tag "answers[#{question.id}]", option, false, data: { hide_question: question.is_parent_of_field } %>
+        <% end %>
+      <% end %>
+      <%= label_tag "answers[#{question.id}][#{index}]", option %>
+      <br>
     <% end %>
-  </ul>
+  </div>
 <% end %>
+
+<script>
+  $(document).ready(function() {
+    $('input[type="radio"]').click(function() {
+      console.log('Hello world')
+      var showQuestionAttr = $(this).data('showQuestion');
+      var hideQuestionAttr = $(this).data('hideQuestion');
+
+      if (showQuestionAttr) {
+        $('#' + showQuestionAttr).show();
+      } else if (hideQuestionAttr) {
+        $('#' + hideQuestionAttr).hide();
+        $('#' + hideQuestionAttr + ' input[type=radio]').prop('checked', false);
+      }
+    });
+  });
+</script>
