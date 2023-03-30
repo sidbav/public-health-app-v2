@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :surveys do
     member do
       get 'select_language'
-      get 'start_survey/:language', to: 'questions#start_survey', as: :start_survey
     end
   end
+  get 'get_questions/:survey_id/:language' , to: 'questions#get_questions', as: :get_questions
   resources :questions
   devise_for :users, :controllers => {:registrations => "users/registrations"}
   devise_scope :user do
