@@ -21,42 +21,42 @@ class SurveysController < ApplicationController
   end
 
   # POST /surveys or /surveys.json
-  def create
-    @survey = Survey.new(survey_params)
+  # def create
+  #   @survey = Survey.new(survey_params)
 
-    respond_to do |format|
-      if @survey.save
-        format.html { redirect_to survey_url(@survey), notice: "Survey was successfully created." }
-        format.json { render :show, status: :created, location: @survey }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @survey.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @survey.save
+  #       format.html { redirect_to survey_url(@survey), notice: "Survey was successfully created." }
+  #       format.json { render :show, status: :created, location: @survey }
+  #     else
+  #       format.html { render :new, status: :unprocessable_entity }
+  #       format.json { render json: @survey.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /surveys/1 or /surveys/1.json
-  def update
-    respond_to do |format|
-      if @survey.update(survey_params)
-        format.html { redirect_to survey_url(@survey), notice: "Survey was successfully updated." }
-        format.json { render :show, status: :ok, location: @survey }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @survey.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @survey.update(survey_params)
+  #       format.html { redirect_to survey_url(@survey), notice: "Survey was successfully updated." }
+  #       format.json { render :show, status: :ok, location: @survey }
+  #     else
+  #       format.html { render :edit, status: :unprocessable_entity }
+  #       format.json { render json: @survey.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /surveys/1 or /surveys/1.json
-  def destroy
-    @survey.destroy
+  # def destroy
+  #   @survey.destroy
 
-    respond_to do |format|
-      format.html { redirect_to surveys_url, notice: "Survey was successfully destroyed." }
-      format.json { head :no_content }
-    end
-  end
+  #   respond_to do |format|
+  #     format.html { redirect_to surveys_url, notice: "Survey was successfully destroyed." }
+  #     format.json { head :no_content }
+  #   end
+  # end
   
   #select language
   def select_language
@@ -66,14 +66,14 @@ class SurveysController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_survey
-      @survey = Survey.find(params[:id])
-    end
+    # def set_survey
+    #   @survey = Survey.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
-    def survey_params
-      params.fetch(:survey, {})
-    end
+    # def survey_params
+    #   params.fetch(:survey, {})
+    # end
 
 
 
