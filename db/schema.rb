@@ -20,9 +20,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_144744) do
     t.text "question_text", null: false
     t.text "options_list", null: false, array: true
     t.integer "option_points_list", null: false, array: true
-    t.integer "question_number", null: false
+    t.text "question_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "is_parent_of_field"
+    t.text "option_selected_to_display_child"
+    t.boolean "has_parent_field", default: false
     t.index ["survey_id", "language"], name: "index_questions_on_survey_id_and_language"
     t.index ["survey_id"], name: "index_questions_on_survey_id"
   end

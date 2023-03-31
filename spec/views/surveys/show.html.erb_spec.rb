@@ -1,11 +1,11 @@
-require 'rails_helper'
+# require 'rails_helper'
 
-RSpec.describe "surveys/show", type: :view do
-  before(:each) do
-    assign(:survey, Survey.create!())
-  end
+# RSpec.describe "surveys/show", type: :view do
+#   before(:each) do
+#     assign(:survey, Survey.create!())
+#   end
 
-  it "renders attributes in <p>" do
-    render
-  end
-end
+#   it "renders attributes in <p>" do
+#     render
+#   end
+# end

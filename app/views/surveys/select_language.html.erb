@@ -2,6 +2,6 @@
 
 <ul>
   <% @languages.each do |language| %>
-    <li><%= link_to language, start_survey_survey_path(@survey, language: language) %></li>
+    <li><%= link_to language, get_questions_path(survey_id: @survey.id, language: language) %></li>
   <% end %>
 </ul>

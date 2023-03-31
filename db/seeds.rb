@@ -62,6 +62,7 @@ user = User.new(
 #seed surveys
  survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
  survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
+ survey3 = Survey.create(survey_name: "Testing the Hide/Show Functionality", survey_category: "Testing Purposes!", languages: ['English'])
 
 #seed questions
 questions = [
@@ -96,7 +97,36 @@ questions = [
     options_list: ["Siempre comemos lo suficiente y los tipos de alimentos que deseamos", "Comemos lo suficiente pero no siempre lo que deseamos", "A veces no comemos lo suficiente", "Frecuentemente no comemos lo suficiente", "No sé, o me niego a responder"],
     option_points_list: [1, 2, 3, 4, 5],
     question_number: 2
-  }
+  },
+  {
+    survey_id: 3,
+    language: "English",
+    question_text: "Are you 18 years of age or older?",
+    options_list: ["Yes", "No"],
+    option_points_list: [1, 0],
+    question_number: "1",
+    has_parent_field: false,
+    is_parent_of_field: "1A",
+    option_selected_to_display_child: "Yes",
+  },
+  {
+    survey_id: 3,
+    language: "English",
+    question_text: "You should only see this question if response was \"Yes\" to the previous question",
+    options_list: ["Yea", "Maybe"],
+    option_points_list: [2, 1, 0],
+    question_number: "1A",
+    has_parent_field: true,
+  },
+  {
+    survey_id: 3,
+    language: "English",
+    question_text: "You should see this question anyways!",
+    options_list: ["Yes I do", "No I dont"],
+    option_points_list: [1, 0],
+    question_number: "2",
+    has_parent_field: false
+  },
 ]
 
 questions.each do |question|

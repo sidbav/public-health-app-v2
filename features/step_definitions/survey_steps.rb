@@ -1,6 +1,8 @@
+
 Given /the following surveys exist/ do |surveys_table|
   surveys_table.hashes.each do |survey|
-    Survey.create survey
+    languages = survey['languages'].split(',').map(&:strip)
+    Survey.create survey.merge(languages: languages)
   end
 end
 
@@ -54,16 +56,18 @@ When(/^I click on the survey link$/) do
   click_link("Survey")
 end
 
-#done
-When(/^I click on the "Take Survey" link in row (\d+)$/) do |survey_number|
-  # code to click on the "Take Survey" link in the specified row
-  row = all('table tr')[survey_number.to_i]
-  within(row) do
-    click_link("Take Survey")
+Given (/^I am on survey page$/) do
+  visit '/surveys'
+end
+
+When(/^I click on the "Take Survey" link on the first row$/) do
+  within("table tbody tr:nth-child(1)") do
+    click_on "Take Survey"
   end
 end
 
-Then(/^I should see (\d+) links to choose/) do |num_links|
-  expect(page).to have_selector('a.choice-link', count: num_links)
+Then(/^I should see the "English", "Spanish", and "Chinese" links$/) do
+  expect(page).to have_link("English")
+  expect(page).to have_link("Spanish")
+  expect(page).to have_link("Chinese")
 end
-

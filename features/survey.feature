@@ -5,9 +5,9 @@ Feature: Survey Feature
 
 Background: surveys and users in database
   Given the following surveys exist:
-  | survey_name | survey_category | languages |
-  | U.S. Household Food Security Survey | Food Security | English, Spanish, Chinese |
-  | Six-Item Short Form of the Food Security Survey | Food Security | English |
+  | id | survey_name | survey_category | languages |
+  | 1 | U.S. Household Food Security Survey | Food Security | English, Spanish, Chinese |
+  | 2 | Six-Item Short Form of the Food Security Survey | Food Security | English |
 
 
   Given the following users exist:
@@ -30,5 +30,13 @@ Scenario: User can view list of surveys
   Given I am logged in
   When I click on the survey link
   Then I should see a table Surveys
+
+Scenario: User can select survey from surveys
+  Given I am logged in
+  When I click on the survey link
+  Then I should see a table Surveys
+  When I click on the "Take Survey" link on the first row
+  Then I should see the "English", "Spanish", and "Chinese" links
+
 
 
