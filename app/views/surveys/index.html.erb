@@ -19,6 +19,7 @@
         <td><%= survey.survey_category %></td>
         <td><%= "Incomplete" %></td>
         <td><%= link_to "Take Survey", select_language_survey_path(survey) %></td>
+        <td><%= link_to "See Your Responses", survey_responses_path(survey) %></td>
       </tr>
     <% end %>
   </tbody>
