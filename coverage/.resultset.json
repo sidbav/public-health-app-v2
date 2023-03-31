@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/models/user.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -12,27 +12,27 @@
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/models/application_record.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/models/survey.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/models/question.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/question.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/application_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -50,31 +50,31 @@
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/helpers/application_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/helpers/home_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/home_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/helpers/questions_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/questions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/helpers/surveys_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/surveys_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/home_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -83,7 +83,7 @@
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/surveys_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/surveys_controller.rb": {
         "lines": [
           1,
           1,
@@ -167,7 +167,7 @@
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/questions_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/questions_controller.rb": {
         "lines": [
           1,
           1,
@@ -250,7 +250,7 @@
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
         "lines": [
           null,
           null,
@@ -316,66 +316,41 @@
           null
         ]
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/channels/application_cable/channel.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/channel.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null
+          0,
+          0,
+          0,
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/channels/application_cable/connection.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/connection.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null
+          0,
+          0,
+          0,
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
         "lines": [
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          0,
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
         "lines": [
           null,
           null,
+          0,
           null,
           null,
           null,
@@ -402,16 +377,16 @@
           null,
           null,
           null,
-          null,
-          null
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
         "lines": [
           null,
           null,
+          0,
           null,
           null,
           null,
@@ -442,16 +417,16 @@
           null,
           null,
           null,
-          null,
-          null
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
         "lines": [
           null,
           null,
+          0,
           null,
           null,
           null,
@@ -475,16 +450,16 @@
           null,
           null,
           null,
-          null,
-          null
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
         "lines": [
           null,
           null,
+          0,
           null,
           null,
           null,
@@ -511,26 +486,25 @@
           null,
           null,
           null,
-          null,
-          null
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/jobs/application_job.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/jobs/application_job.rb": {
         "lines": [
+          0,
           null,
           null,
           null,
           null,
           null,
-          null,
-          null
+          0
         ],
         "branches": {
         }
       },
-      "C:/Users/Chinmay/Desktop/Tamu acad/SE/public-health-app-v2/app/mailers/application_mailer.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -541,6 +515,6 @@
         }
       }
     },
-    "timestamp": 1680199729
+    "timestamp": 1680228002
   }
 }
