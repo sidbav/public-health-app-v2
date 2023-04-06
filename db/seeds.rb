@@ -136,7 +136,10 @@ questions.each do |question|
     question_text: question[:question_text],
     options_list: question[:options_list],
     option_points_list: question[:option_points_list],
-    question_number: question[:question_number]
+    question_number: question[:question_number],
+    has_parent_field: question[:has_parent_field],
+    is_parent_of_field: question[:is_parent_of_field],
+    option_selected_to_display_child: question[:option_selected_to_display_child],
   )
 end
 
