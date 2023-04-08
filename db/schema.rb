@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_144744) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_08_155109) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_144744) do
   create_table "responses", force: :cascade do |t|
     t.bigint "survey_id", null: false
     t.bigint "user_id", null: false
-    t.integer "question_number"
+    t.text "question_number"
     t.integer "response_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
