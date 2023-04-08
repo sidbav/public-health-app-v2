@@ -43,6 +43,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
+  create_table "survey_results", force: :cascade do |t|
+    t.bigint "survey_id", null: false
+    t.bigint "users_id", null: false
+    t.integer "total_score", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id", "users_id"], name: "index_survey_results_on_survey_id_and_users_id"
+    t.index ["survey_id"], name: "index_survey_results_on_survey_id"
+    t.index ["users_id"], name: "index_survey_results_on_users_id"
+  end
+
   create_table "surveys", force: :cascade do |t|
     t.text "survey_name", default: "", null: false
     t.text "survey_category", null: false
@@ -80,4 +91,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
   add_foreign_key "questions", "surveys"
   add_foreign_key "responses", "surveys"
   add_foreign_key "responses", "users"
+  add_foreign_key "survey_results", "surveys"
+  add_foreign_key "survey_results", "users", column: "users_id"
 end

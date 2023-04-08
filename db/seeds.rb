@@ -180,8 +180,103 @@ questions.each do |question|
 end
 
 # seed resposes
-survey = Survey.first
-user = User.first
+# survey = Survey.first
+# user = User.first
+
+# response1 = Response.create(
+#   survey: survey,
+#   user: user,
+#   question_number: "1",
+#   response_option_number: 1,
+#   response_score: 1
+# )
+
+# response2 = Response.create(
+#   survey: survey,
+#   user: user,
+#   question_number: 2,
+#   response_option_number: 0,
+#   response_score: 0
+# )
+
+#user = User.first
+#survey = Survey.find_by(survey_name: "Six-Item Short Form of the Food Security Survey")
+#
+#food_insecurce_responses = [
+#  {
+#    question_number: "HH3",
+#    response_option_number: 0,
+#    response_score: 1
+#  },
+#  {
+#    question_number: "HH4",
+#    response_option_number: 0,
+#    response_score: 1
+#  },
+#  {
+#    question_number: "AD1",
+#    response_option_number: 0,
+#    response_score: 1
+#  },
+#  {
+#    question_number: "AD1a",
+#    response_option_number: 0,
+#    response_score: 1
+#  },
+#  {
+#    question_number: "AD2",
+#    response_option_number: 0,
+#    response_score: 1
+#  },
+#  {
+#    question_number: "AD3",
+#    response_option_number: 0,
+#    response_score: 1
+#  },
+#]
+#
+#food_insecurce_responses.each do |response|
+#  Response.create!(
+#    survey: survey,
+#    user: user,
+#    question_number: response[:question_number],
+#    response_option_number: response[:response_option_number],
+#    response_score: response[:response_score]
+#  )
+#end
+
+#food_securce_responses = [
+#  {
+#    question_number: "HH3",
+#    response_option_number: 2,
+#    response_score: 0
+#  },
+#  {
+#    question_number: "HH4",
+#    response_option_number: 2,
+#    response_score: 0
+#  },
+#  {
+#    question_number: "AD1",
+#    response_option_number: 1,
+#    response_score: 0
+#  },
+#  {
+#    question_number: "AD1a",
+#    response_option_number: 2,
+#    response_score: 0
+#  },
+#  {
+#    question_number: "AD2",
+#    response_option_number: 1,
+#    response_score: 0
+#  },
+#  {
+#    question_number: "AD3",
+#    response_option_number: 1,
+#    response_score: 0
+#  },
+#]
 
 time1 = Time.now
 time2 = 1.day.ago
