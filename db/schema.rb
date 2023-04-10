@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.integer "response_option_number"
     t.datetime "time_submitted"
     t.index ["survey_id"], name: "index_responses_on_survey_id"
+    t.index ["survey_result_id"], name: "index_responses_on_survey_result_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
@@ -52,6 +53,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.index ["survey_id", "users_id"], name: "index_survey_results_on_survey_id_and_users_id"
     t.index ["survey_id"], name: "index_survey_results_on_survey_id"
     t.index ["users_id"], name: "index_survey_results_on_users_id"
+  end
+
+  create_table "survey_status", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "survey_id", null: false
+    t.boolean "status"
+    t.date "date"
+    t.date "date_requested"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["survey_id"], name: "index_survey_status_on_survey_id"
+    t.index ["user_id"], name: "index_survey_status_on_user_id"
   end
 
   create_table "surveys", force: :cascade do |t|
@@ -89,8 +102,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
   end
 
   add_foreign_key "questions", "surveys"
+  add_foreign_key "responses", "survey_results"
   add_foreign_key "responses", "surveys"
   add_foreign_key "responses", "users"
   add_foreign_key "survey_results", "surveys"
   add_foreign_key "survey_results", "users", column: "users_id"
+  add_foreign_key "survey_status", "surveys"
+  add_foreign_key "survey_status", "users"
 end
