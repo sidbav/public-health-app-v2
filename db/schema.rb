@@ -40,7 +40,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.integer "response_option_number"
     t.datetime "time_submitted"
     t.index ["survey_id"], name: "index_responses_on_survey_id"
-    t.index ["survey_result_id"], name: "index_responses_on_survey_result_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
@@ -90,7 +89,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
   end
 
   add_foreign_key "questions", "surveys"
-  add_foreign_key "responses", "survey_results"
   add_foreign_key "responses", "surveys"
   add_foreign_key "responses", "users"
   add_foreign_key "survey_results", "surveys"
