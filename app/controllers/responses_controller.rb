@@ -22,19 +22,6 @@ class ResponsesController < ApplicationController
     #   end
     # end
   
-    # def edit
-    #   @response = Response.find(params[:id])
-    # end
-  
-    # def update
-    #   @response = Response.find(params[:id])
-    #   if @response.update(response_params)
-    #     @response.calculate_response_score
-    #   else
-    #     render :edit
-    #   end
-    # end
-  
     private
   
     def response_params

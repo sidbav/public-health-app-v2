@@ -9,7 +9,7 @@
     <tr>
       <th>Question Text</th>
       <th>Response</th>
-      <th>Response Score</th>
+      <th>Time Submitted</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,10 +19,7 @@
       <tr>
         <td><%= @questions.where(question_number: response.question_number).first.question_text %></td>
         <td><%= response.response_option_number.nil? ? "" : @questions.where(question_number: response.question_number).first.options_list[response.response_option_number] %></td>
-        <td><%= response.response_score %></td>
-        <td><%= link_to 'Show', survey_response_path(@survey, response) %></td>
-        <td><%= link_to 'Edit', edit_survey_response_path(@survey, response) %></td>
-        <td><%= link_to 'Delete', survey_response_path(@survey, response), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= response.time_submitted %></td>
       </tr>
     <% end %>
   </tbody>
