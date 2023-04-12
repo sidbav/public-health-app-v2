@@ -48,7 +48,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_170223) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "response_option_number"
-    t.bigint "survey_result_id", null: false
     t.datetime "time_submitted"
     t.index ["survey_id"], name: "index_responses_on_survey_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
