@@ -1,0 +1,28 @@
+<h1>Responses</h1>
+<%= form_tag survey_responses_path(@survey, language: @language), method: :get do %>
+    <%= select_tag :language, options_for_select(@survey.languages, @language) %>
+    <%= submit_tag "Change Language" %>
+  <% end %>
+  
+<table>
+  <thead>
+    <tr>
+      <th>Question Text</th>
+      <th>Response</th>
+      <th>Time Submitted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @responses.each do |response| %>
+      <tr>
+        <td><%= @questions.where(question_number: response.question_number).first.question_text %></td>
+        <td><%= response.response_option_number.nil? ? "" : @questions.where(question_number: response.question_number).first.options_list[response.response_option_number] %></td>
+        <td><%= response.time_submitted %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

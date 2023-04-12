@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # resources :surveys
   resources :surveys do
+    resources :responses
     member do
       get 'select_language'
     end
