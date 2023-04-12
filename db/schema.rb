@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_12_015757) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categorys", force: :cascade do |t|
+    t.bigint "surveys_id", null: false
+    t.bigint "low_score", null: false
+    t.bigint "high_score", null: false
+    t.text "category", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["surveys_id"], name: "index_categorys_on_surveys_id"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.bigint "survey_id", null: false
@@ -40,7 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.integer "response_option_number"
     t.datetime "time_submitted"
     t.index ["survey_id"], name: "index_responses_on_survey_id"
-    t.index ["survey_result_id"], name: "index_responses_on_survey_result_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
@@ -101,8 +110,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categorys", "surveys", column: "surveys_id"
   add_foreign_key "questions", "surveys"
-  add_foreign_key "responses", "survey_results"
   add_foreign_key "responses", "surveys"
   add_foreign_key "responses", "users"
   add_foreign_key "survey_results", "surveys"
