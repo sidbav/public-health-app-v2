@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_13_023053) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.bigint "surveys_id", null: false
+    t.bigint "low_score", null: false
+    t.bigint "high_score", null: false
+    t.text "category", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["surveys_id"], name: "index_categories_on_surveys_id"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.bigint "survey_id", null: false
@@ -41,6 +51,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.datetime "time_submitted"
     t.index ["survey_id"], name: "index_responses_on_survey_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
+  end
+
+  create_table "survey_results", force: :cascade do |t|
+    t.bigint "survey_id", null: false
+    t.bigint "users_id", null: false
+    t.integer "total_score", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "time_submitted", null: false
+    t.bigint "categories_id", null: false
+    t.index ["categories_id"], name: "index_survey_results_on_categories_id"
+    t.index ["survey_id", "users_id"], name: "index_survey_results_on_survey_id_and_users_id"
+    t.index ["survey_id"], name: "index_survey_results_on_survey_id"
+    t.index ["users_id"], name: "index_survey_results_on_users_id"
   end
 
   create_table "surveys", force: :cascade do |t|
@@ -77,7 +101,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_122713) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "surveys", column: "surveys_id"
   add_foreign_key "questions", "surveys"
   add_foreign_key "responses", "surveys"
   add_foreign_key "responses", "users"
+  add_foreign_key "survey_results", "surveys"
+  add_foreign_key "survey_results", "users", column: "users_id"
 end

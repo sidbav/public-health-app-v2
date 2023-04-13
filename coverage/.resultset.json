@@ -68,6 +68,18 @@
           null
         ]
       },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/responses_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/survey_results_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/surveys_helper.rb": {
         "lines": [
           1,
@@ -336,11 +348,73 @@
         "branches": {
         }
       },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/responses_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/survey_results_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
         "lines": [
           null,
           null,
           0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           0
         ],
         "branches": {
@@ -513,8 +587,42 @@
         ],
         "branches": {
         }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/category.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/response.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey_result.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1680228002
+    "timestamp": 1681353355
   }
 }

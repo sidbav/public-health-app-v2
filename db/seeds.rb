@@ -8,128 +8,121 @@
 
 #seed users
 user = User.new(
-    email: 'user1@example.com',
-    password: '123456',
-    password_confirmation: '123456',
-    first_name: 'User1',
-    last_name: 'User1',
-    address_line_1: 'address',
-    address_line_2: 'address',
-    city: 'city',
-    state: 'state',
-    zip: '12345',
-    phone_number: '1234567890',
-    date_of_birth: Date.new(1990, 1, 1),
-    confirmed_at: Time.now
-  )
-  user.skip_confirmation_notification! # Skip sending email confirmation
-  user.save!
+  email: 'user1@example.com',
+  password: '123456',
+  password_confirmation: '123456',
+  first_name: 'User1',
+  last_name: 'User1',
+  address_line_1: 'address',
+  address_line_2: 'address',
+  city: 'city',
+  state: 'state',
+  zip: '12345',
+  phone_number: '1234567890',
+  date_of_birth: Date.new(1990, 1, 1),
+  confirmed_at: Time.now
+)
+user.skip_confirmation_notification! # Skip sending email confirmation
+user.save!
 
-  user = User.new(
-    email: 'user2@example.com',
-    password: '123456',
-    password_confirmation: '123456',
-    first_name: 'User2',
-    last_name: 'User2',
-    address_line_1: 'address',
-    address_line_2: 'address',
-    city: 'city',
-    state: 'state',
-    zip: '12345',
-    phone_number: '1234567890',
-    date_of_birth: Date.new(1990, 1, 1),
-    confirmed_at: Time.now
-  )
-  user.skip_confirmation_notification! # Skip sending email confirmation
-  user.save!
+user = User.new(
+  email: 'user2@example.com',
+  password: '123456',
+  password_confirmation: '123456',
+  first_name: 'User2',
+  last_name: 'User2',
+  address_line_1: 'address',
+  address_line_2: 'address',
+  city: 'city',
+  state: 'state',
+  zip: '12345',
+  phone_number: '1234567890',
+  date_of_birth: Date.new(1990, 1, 1),
+  confirmed_at: Time.now
+)
+user.skip_confirmation_notification! # Skip sending email confirmation
+user.save!
 
-  user = User.new(
-    email: 'user3@example.com',
-    password: '123456',
-    password_confirmation: '123456',
-    first_name: 'User3',
-    last_name: 'User3',
-    address_line_1: 'address',
-    address_line_2: 'address',
-    city: 'city',
-    state: 'state',
-    zip: '12345',
-    phone_number: '1234567890',
-    date_of_birth: Date.new(1990, 1, 1)
-  )
-  user.save!
+user = User.new(
+  email: 'user3@example.com',
+  password: '123456',
+  password_confirmation: '123456',
+  first_name: 'User3',
+  last_name: 'User3',
+  address_line_1: 'address',
+  address_line_2: 'address',
+  city: 'city',
+  state: 'state',
+  zip: '12345',
+  phone_number: '1234567890',
+  date_of_birth: Date.new(1990, 1, 1)
+)
+user.save!
 
 #seed surveys
- survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
- survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
- survey3 = Survey.create(survey_name: "Testing the Hide/Show Functionality", survey_category: "Testing Purposes!", languages: ['English'])
+survey1 = Survey.create(survey_name: "U.S. Household Food Security Survey", survey_category: "Food Security", languages: ['English', 'Spanish', 'Chinese'])
+survey2 = Survey.create(survey_name: "Six-Item Short Form of the Food Security Survey", survey_category: "Food Security", languages: ['English'])
 
-#seed questions
-questions = [
+survey2_questions = [
   {
-    survey_id: 1,
+    survey_id: 2,
     language: "English",
-    question_text: "Do you have children under the age of 18 in your household?",
-    options_list: ["No", "Yes"],
-    option_points_list: [0, 1],
-    question_number: 1
-  },
-  {
-    survey_id: 1,
-    language: "English",
-    question_text: "Which of these statements best describes the food eaten in your household in the last 12 months?",
-    options_list: ["Enough of the kinds of food we want to eat", "Enough, but not always the kinds of food we want", "Sometimes not enough to eat", "Often not enough to eat", "I don't know, or I refuse to answer"],
-    option_points_list: [0, 1, 2, 3, 4, 5],
-    question_number: 2
-  },
-  {
-    survey_id: 1,
-    language: "Spanish",
-    question_text: "Tiene hijos menores de 18 años en su hogar?",
-    options_list: ["No", "Si"],
-    option_points_list: [0, 1],
-    question_number: 1
-  },
-  {
-    survey_id: 1,
-    language: "Spanish",
-    question_text: "Cuál de las siguientes declaraciones describe mejor la situación alimentaria en su hogar en los últimos 12 meses?",
-    options_list: ["Siempre comemos lo suficiente y los tipos de alimentos que deseamos", "Comemos lo suficiente pero no siempre lo que deseamos", "A veces no comemos lo suficiente", "Frecuentemente no comemos lo suficiente", "No sé, o me niego a responder"],
-    option_points_list: [1, 2, 3, 4, 5],
-    question_number: 2
-  },
-  {
-    survey_id: 3,
-    language: "English",
-    question_text: "Are you 18 years of age or older?",
-    options_list: ["Yes", "No"],
-    option_points_list: [1, 0],
-    question_number: "1",
-    has_parent_field: false,
-    is_parent_of_field: "1A",
-    option_selected_to_display_child: "Yes",
-  },
-  {
-    survey_id: 3,
-    language: "English",
-    question_text: "You should only see this question if response was \"Yes\" to the previous question",
-    options_list: ["Yea", "Maybe"],
-    option_points_list: [2, 1, 0],
-    question_number: "1A",
-    has_parent_field: true,
-  },
-  {
-    survey_id: 3,
-    language: "English",
-    question_text: "You should see this question anyways!",
-    options_list: ["Yes I do", "No I dont"],
-    option_points_list: [1, 0],
-    question_number: "2",
+    question_text: "\"The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.\” Was that often, sometimes, or never true for (you/your household) in the last 12 months?",
+    options_list: ["Often True","Sometimes True","Never True","Don't Know or Refused"],
+    option_points_list: [1,1,0,0],
+    question_number: "HH3",
     has_parent_field: false
   },
+  {
+    survey_id: 2,
+    language: "English",
+    question_text: "\"(I/we) couldn't afford to eat balanced meals.\" Was that often, sometimes, or never true for (you/your household) in the last 12 months?",
+    options_list: ["Often True","Sometimes True","Never True","Don't Know or Refused"],
+    option_points_list: [1,1,0,0],
+    question_number: "HH4",
+    has_parent_field: false
+  },
+  {
+    survey_id: 2,
+    language: "English",
+    question_text: "In the last 12 months, since last (name of current month), did (you/you or other adults in your household) ever cut the size of your meals or skip meals because there wasn't\nenough money for food?",
+    options_list: ["Yes","No","Don't Know"],
+    option_points_list: [1,0,0],
+    question_number: "AD1",
+    is_parent_of_field: "AD1a",
+    option_selected_to_display_child: "Yes",
+    has_parent_field: false
+  },
+  {
+    survey_id: 2,
+    language: "English",
+    question_text: "How often did this happen—almost every month, some months but not every month, or in only 1 or 2 months?",
+    options_list: ["Almost Every Month","Some months but not every month","Only 1 month or 2 months","Don't Know"],
+    option_points_list: [1,1,0,0],
+    question_number: "AD1a",
+    has_parent_field: true
+  },
+  {
+    survey_id: 2,
+    language: "English",
+    question_text: "In the last 12 months, did you ever eat less than you felt you should because there wasn't\nenough money for food?",
+    options_list: ["Yes","No","Don't Know"],
+    option_points_list: [1,0,0],
+    question_number: "AD2",
+    has_parent_field: false
+  },
+  {
+    survey_id: 2,
+    language: "English",
+    question_text: "In the last 12 months, were you every hungry but didn't eat because there wasn't enough money for food?",
+    options_list: ["Yes","No","Don't Know"],
+    option_points_list: [1,0,0],
+    question_number: "AD3",
+    has_parent_field: false
+  }
 ]
 
-questions.each do |question|
+survey2_questions.each do |question|
   Question.create!(
     survey_id: question[:survey_id],
     language: question[:language],
@@ -143,81 +136,142 @@ questions.each do |question|
   )
 end
 
-
-questions = [
-   {
-     survey_id: 1,
-     language: "English",
-     question_text: "Do you have children under the age of 18 in your household?",
-     options_list: ["No", "Yes"],
-     option_points_list: [0, 1],
-     question_number: "1",
-     has_parent_field: false
-   },
-   {
-     survey_id: 1,
-     language: "English",
-     question_text: "Which of these statements best describes the food eaten in your household in the last 12 months?",
-     options_list: ["Enough of the kinds of food we want to eat", "Enough, but not always the kinds of food we want", "Sometimes not enough to eat", "Often not enough to eat", "I don't know, or I refuse to answer"],
-     option_points_list: [0, 1, 2, 3, 4, 5],
-     question_number: "2",
-     has_parent_field: false
-   },
+survey2_categories = [
+  {
+    low_score: 0,
+    high_score: 0,
+    category: "High Food Security",
+  },
+  {
+    low_score: 1,
+    high_score: 1,
+    category: "Marginal Food Security",
+  },
+  {
+    low_score: 2,
+    high_score: 4,
+    category: "Low Food Security",
+  },
+  {
+    low_score: 5,
+    high_score: 6,
+    category: "Very Low Food Security",
+  },
 ]
 
-questions.each do |question|
-  Question.create!(
-    survey_id: question[:survey_id],
-    language: question[:language],
-    question_text: question[:question_text],
-    options_list: question[:options_list],
-    option_points_list: question[:option_points_list],
-    question_number: question[:question_number],
-    has_parent_field: question[:has_parent_field],
-    is_parent_of_field: question[:is_parent_of_field],
-    option_selected_to_display_child: question[:option_selected_to_display_child],
+survey2_categories.each do |cat|
+  Category.create!(
+    surveys_id: survey2.id,
+    low_score: cat[:low_score],
+    high_score: cat[:high_score],
+    category: cat[:category],
   )
 end
 
-# seed resposes
-survey = Survey.first
 user = User.first
-
 time1 = Time.now
-time2 = 1.day.ago
 
-response1 = Response.create(
-  survey: survey,
-  user: user,
-  question_number: "1",
-  response_option_number: 1,
-  response_score: 1,
-  time_submitted: time1
+food_insecurce_responses = [
+  {
+    question_number: "HH3",
+    response_option_number: 0,
+    response_score: 1
+  },
+  {
+    question_number: "HH4",
+    response_option_number: 0,
+    response_score: 1
+  },
+  {
+    question_number: "AD1",
+    response_option_number: 0,
+    response_score: 1
+  },
+  {
+    question_number: "AD1a",
+    response_option_number: 0,
+    response_score: 1
+  },
+  {
+    question_number: "AD2",
+    response_option_number: 0,
+    response_score: 1
+  },
+  {
+    question_number: "AD3",
+    response_option_number: 0,
+    response_score: 1
+  },
+]
+
+food_insecurce_responses.each do |response|
+  Response.create!(
+    survey: survey2,
+    user: user,
+    question_number: response[:question_number],
+    response_option_number: response[:response_option_number],
+    response_score: response[:response_score],
+    time_submitted: time1
+  )
+end
+
+SurveyResult.create!(
+  survey: survey2,
+  users_id: user.id,
+  total_score: 6,
+  time_submitted: time1,
+  categories_id: 4
 )
 
-response2 = Response.create(
-  survey: survey,
-  user: user,
-  question_number: "2",
-  response_option_number: 0,
-  response_score: 0,
-  time_submitted: time1
-)
+user = User.second
+food_securce_responses = [
+  {
+    question_number: "HH3",
+    response_option_number: 2,
+    response_score: 0
+  },
+  {
+    question_number: "HH4",
+    response_option_number: 2,
+    response_score: 0
+  },
+  {
+    question_number: "AD1",
+    response_option_number: 1,
+    response_score: 0
+  },
+  {
+    question_number: "AD1a",
+    response_option_number: 2,
+    response_score: 0
+  },
+  {
+    question_number: "AD2",
+    response_option_number: 1,
+    response_score: 0
+  },
+  {
+    question_number: "AD3",
+    response_option_number: 1,
+    response_score: 0
+  },
+]
 
-response3 = Response.create(
-  survey: survey,
-  user: user,
-  question_number: "1",
-  response_option_number: 0,
-  response_score: 0,
-  time_submitted: time2
-)
+food_securce_responses.each do |response|
+  Response.create!(
+    survey: survey2,
+    user: user,
+    question_number: response[:question_number],
+    response_option_number: response[:response_option_number],
+    response_score: response[:response_score],
+    time_submitted: time1
+  )
+end
 
-response4 = Response.create(
-  survey: survey,
-  user: user,
-  question_number: "2",
-  response_option_number: 2,
-  response_score: 2,
-  time_submitted: time2
+SurveyResult.create!(
+  survey: survey2,
+  users_id: user.id,
+  total_score: 0,
+  time_submitted: time1,
+  categories_id: 1
 )
