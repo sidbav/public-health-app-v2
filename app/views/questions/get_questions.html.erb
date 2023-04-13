@@ -25,8 +25,37 @@
   </div>
 <% end %>
 
+<button id="submit-button">Submit</button>
+
 <script>
   $(document).ready(function() {
+    $('#submit-button').click(function() {
+      var allQuestionsAnswered = true;
+      $('input[type="radio"]').each(function() {
+        if ($(this).is(':checked') == false) {
+          allQuestionsAnswered = false;
+          return false;
+        }
+      });
+
+      if (allQuestionsAnswered) {
+        var answers = $('form').serialize();
+
+        $.ajax({
+          url: '/responses',
+          type: 'POST',
+          data: answers,
+          success: function() {
+            window.location.href = '/surveys';
+          }
+        });
+      } else {
+        alert('Please answer all questions.');
+      }
+    });
+
+
+
     $('input[type="radio"]').click(function() {
       console.log('Hello world')
       var showQuestionAttr = $(this).data('showQuestion');
