@@ -30,13 +30,23 @@
 <script>
   $(document).ready(function() {
     $('#submit-button').click(function() {
-      var allQuestionsAnswered = true;
-      $('input[type="radio"]').each(function() {
-        if ($(this).is(':checked') == false) {
+      var allQuestionsAnswered = false;
+      $('.question').each(function() {
+        var questionAnswered = false;
+        $(this).find('input[type="radio"]').each(function() {
+          if ($(this).is(':checked')) {
+            questionAnswered = true;
+            return false;
+          }
+        });
+        if (!questionAnswered) {
           allQuestionsAnswered = false;
           return false;
         }
       });
+      
+
+
 
       if (allQuestionsAnswered) {
         var answers = $('form').serialize();
@@ -49,8 +59,9 @@
             window.location.href = '/surveys';
           }
         });
+        alert('response saved');
       } else {
-        alert('Please answer all questions.');
+        notice('Please answer all questions.');
       }
     });
 

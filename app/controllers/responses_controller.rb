@@ -20,4 +20,26 @@ class ResponsesController < ApplicationController
     def response_params
       params.require(:response).permit(:survey_id, :user_id, :question_number, :response, :language, :category)
     end
+  
+    def create
+      @survey = Survey.find(params[:survey_id])
+      @user = current_user
+  
+      # Loop through all the submitted answers and create a response for each one
+      params[:answers].each do |question_id, answer|
+        response = Response.new(
+          survey: @survey,
+          user: @user,
+          question_number: question_id,
+          response_score: answer[:response_score],
+          response_option_number: answer[:response_option_number],
+          time_submitted: Time.now
+        )
+        response.save
+      end
+  
+      # Redirect to the surveys index page after saving the responses
+      redirect_to surveys_path, notice: 'Responses saved successfully.'
+    end
   end
+  
