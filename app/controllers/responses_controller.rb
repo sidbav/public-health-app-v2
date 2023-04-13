@@ -5,6 +5,9 @@ class ResponsesController < ApplicationController
         @responses = Response.where(survey_id: params[:survey_id], user_id: current_user.id, time_submitted: @latest_time_submitted)
         @language = params[:language] || "English"
         @questions = Question.where(survey_id: params[:survey_id], language: @language)
+        @survey_results = SurveyResult.where(survey_id: params[:survey_id], users_id: current_user.id, time_submitted: @latest_time_submitted)
+        #@category = Category.where(categories_id: @survey_results[:categories_id])
+        @category = Category.where(categories_id: @survey_results.categories_id)
     end
 
     private

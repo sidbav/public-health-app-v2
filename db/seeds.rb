@@ -136,6 +136,38 @@ survey2_questions.each do |question|
   )
 end
 
+survey2_categories = [
+  {
+    low_score: 0,
+    high_score: 0,
+    category: "High Food Security",
+  },
+  {
+    low_score: 1,
+    high_score: 1,
+    category: "Marginal Food Security",
+  },
+  {
+    low_score: 2,
+    high_score: 4,
+    category: "Low Food Security",
+  },
+  {
+    low_score: 5,
+    high_score: 6,
+    category: "Very Low Food Security",
+  },
+]
+
+survey2_categories.each do |cat|
+  Category.create!(
+    surveys_id: survey2.id,
+    low_score: cat[:low_score],
+    high_score: cat[:high_score],
+    category: cat[:category],
+  )
+end
+
 user = User.first
 time1 = Time.now
 
@@ -183,6 +215,14 @@ food_insecurce_responses.each do |response|
   )
 end
 
+SurveyResult.create!(
+  survey: survey2,
+  users_id: user.id,
+  total_score: 6,
+  time_submitted: time1,
+  categories_id: 4
+)
+
 user = User.second
 food_securce_responses = [
   {
@@ -228,34 +268,10 @@ food_securce_responses.each do |response|
   )
 end
 
-survey2_categories = [
-  {
-    low_score: 0,
-    high_score: 0,
-    category: "High Food Security",
-  },
-  {
-    low_score: 1,
-    high_score: 1,
-    category: "Marginal Food Security",
-  },
-  {
-    low_score: 2,
-    high_score: 4,
-    category: "Low Food Security",
-  },
-  {
-    low_score: 5,
-    high_score: 6,
-    category: "Very Low Food Security",
-  },
-]
-
-survey2_categories.each do |cat|
-  Category.create!(
-    surveys_id: survey2.id,
-    low_score: cat[:low_score],
-    high_score: cat[:high_score],
-    category: cat[:category],
-  )
-end
+SurveyResult.create!(
+  survey: survey2,
+  users_id: user.id,
+  total_score: 0,
+  time_submitted: time1,
+  categories_id: 1
+)
