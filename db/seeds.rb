@@ -227,3 +227,35 @@ food_securce_responses.each do |response|
     time_submitted: time1
   )
 end
+
+survey2_categories = [
+  {
+    low_score: 0,
+    high_score: 0,
+    category: "High Food Security",
+  },
+  {
+    low_score: 1,
+    high_score: 1,
+    category: "Marginal Food Security",
+  },
+  {
+    low_score: 2,
+    high_score: 4,
+    category: "Low Food Security",
+  },
+  {
+    low_score: 5,
+    high_score: 6,
+    category: "Very Low Food Security",
+  },
+]
+
+survey2_categories.each do |cat|
+  Category.create!(
+    surveys_id: survey2.id,
+    low_score: cat[:low_score],
+    high_score: cat[:high_score],
+    category: cat[:category],
+  )
+end
