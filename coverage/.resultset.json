@@ -379,11 +379,6 @@
           0,
           0,
           0,
-          null,
-          null,
-          0,
-          0,
-          0,
           0
         ],
         "branches": {
@@ -621,12 +616,13 @@
       "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey_result.rb": {
         "lines": [
           0,
+          0,
           0
         ],
         "branches": {
         }
       }
     },
-    "timestamp": 1681351977
+    "timestamp": 1681353355
   }
 }

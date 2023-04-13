@@ -16,7 +16,7 @@
   <tbody>
     <% @responses.each do |response| %>
       <tr>
-        <td><%= @questions.where(question_number: response.question_number).first.question_text %><br></td>
+        <td><%= @questions.where(question_number: response.question_number).first.question_text %></td>
         <td><%= response.response_option_number.nil? ? "" : @questions.where(question_number: response.question_number).first.options_list[response.response_option_number] %></td>
       </tr>
     <% end %>
