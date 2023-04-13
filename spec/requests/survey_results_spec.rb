@@ -13,7 +13,7 @@ require 'rails_helper'
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/survey_results", type: :request do
-  
+
   # This should return the minimal set of attributes required to create a valid
   # SurveyResult. As you add validations to SurveyResult, be sure to
   # adjust the attributes here as well.
@@ -25,111 +25,4 @@ RSpec.describe "/survey_results", type: :request do
     skip("Add a hash of attributes invalid for your model")
   }
 
-  describe "GET /index" do
-    it "renders a successful response" do
-      SurveyResult.create! valid_attributes
-      get survey_results_url
-      expect(response).to be_successful
-    end
-  end
-
-  describe "GET /show" do
-    it "renders a successful response" do
-      survey_result = SurveyResult.create! valid_attributes
-      get survey_result_url(survey_result)
-      expect(response).to be_successful
-    end
-  end
-
-  describe "GET /new" do
-    it "renders a successful response" do
-      get new_survey_result_url
-      expect(response).to be_successful
-    end
-  end
-
-  describe "GET /edit" do
-    it "renders a successful response" do
-      survey_result = SurveyResult.create! valid_attributes
-      get edit_survey_result_url(survey_result)
-      expect(response).to be_successful
-    end
-  end
-
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new SurveyResult" do
-        expect {
-          post survey_results_url, params: { survey_result: valid_attributes }
-        }.to change(SurveyResult, :count).by(1)
-      end
-
-      it "redirects to the created survey_result" do
-        post survey_results_url, params: { survey_result: valid_attributes }
-        expect(response).to redirect_to(survey_result_url(SurveyResult.last))
-      end
-    end
-
-    context "with invalid parameters" do
-      it "does not create a new SurveyResult" do
-        expect {
-          post survey_results_url, params: { survey_result: invalid_attributes }
-        }.to change(SurveyResult, :count).by(0)
-      end
-
-    
-      it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post survey_results_url, params: { survey_result: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-    
-    end
-  end
-
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested survey_result" do
-        survey_result = SurveyResult.create! valid_attributes
-        patch survey_result_url(survey_result), params: { survey_result: new_attributes }
-        survey_result.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "redirects to the survey_result" do
-        survey_result = SurveyResult.create! valid_attributes
-        patch survey_result_url(survey_result), params: { survey_result: new_attributes }
-        survey_result.reload
-        expect(response).to redirect_to(survey_result_url(survey_result))
-      end
-    end
-
-    context "with invalid parameters" do
-    
-      it "renders a response with 422 status (i.e. to display the 'edit' template)" do
-        survey_result = SurveyResult.create! valid_attributes
-        patch survey_result_url(survey_result), params: { survey_result: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-    
-    end
-  end
-
-  describe "DELETE /destroy" do
-    it "destroys the requested survey_result" do
-      survey_result = SurveyResult.create! valid_attributes
-      expect {
-        delete survey_result_url(survey_result)
-      }.to change(SurveyResult, :count).by(-1)
-    end
-
-    it "redirects to the survey_results list" do
-      survey_result = SurveyResult.create! valid_attributes
-      delete survey_result_url(survey_result)
-      expect(response).to redirect_to(survey_results_url)
-    end
-  end
 end

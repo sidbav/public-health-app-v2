@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :survey_results
-  # resources :surveys
   resources :surveys do
     resources :responses
     member do
