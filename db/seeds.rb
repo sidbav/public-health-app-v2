@@ -71,7 +71,7 @@ survey2_questions = [
     options_list: ["Often True","Sometimes True","Never True","Don't Know or Refused"],
     option_points_list: [1,1,0,0],
     question_number: "HH3",
-    has_parent_field: false
+    
   },
   {
     survey_id: 2,
@@ -80,7 +80,7 @@ survey2_questions = [
     options_list: ["Often True","Sometimes True","Never True","Don't Know or Refused"],
     option_points_list: [1,1,0,0],
     question_number: "HH4",
-    has_parent_field: false
+    
   },
   {
     survey_id: 2,
@@ -89,9 +89,9 @@ survey2_questions = [
     options_list: ["Yes","No","Don't Know"],
     option_points_list: [1,0,0],
     question_number: "AD1",
-    is_parent_of_field: "AD1a",
+    child: "AD1a",
     option_selected_to_display_child: "Yes",
-    has_parent_field: false
+    
   },
   {
     survey_id: 2,
@@ -100,7 +100,7 @@ survey2_questions = [
     options_list: ["Almost Every Month","Some months but not every month","Only 1 month or 2 months","Don't Know"],
     option_points_list: [1,1,0,0],
     question_number: "AD1a",
-    has_parent_field: true
+    parent_question_number: "AD1"
   },
   {
     survey_id: 2,
@@ -109,7 +109,7 @@ survey2_questions = [
     options_list: ["Yes","No","Don't Know"],
     option_points_list: [1,0,0],
     question_number: "AD2",
-    has_parent_field: false
+    
   },
   {
     survey_id: 2,
@@ -118,7 +118,7 @@ survey2_questions = [
     options_list: ["Yes","No","Don't Know"],
     option_points_list: [1,0,0],
     question_number: "AD3",
-    has_parent_field: false
+    
   }
 ]
 
@@ -130,8 +130,8 @@ survey2_questions.each do |question|
     options_list: question[:options_list],
     option_points_list: question[:option_points_list],
     question_number: question[:question_number],
-    has_parent_field: question[:has_parent_field],
-    is_parent_of_field: question[:is_parent_of_field],
+    parent_question_number: question[:parent_question_number],
+    child: question[:child],
     option_selected_to_display_child: question[:option_selected_to_display_child],
   )
 end

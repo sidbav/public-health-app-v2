@@ -11,9 +11,9 @@ Given /the following questions exist/ do |questions_table|
       options_list: options,
       option_points_list: options_points,
       question_number: question[:question_number],
-      has_parent_field: question[:has_parent_field],
-      is_parent_of_field: question[:is_parent_of_field],
+      child: question[:child],
       option_selected_to_display_child: question[:option_selected_to_display_child],
+      parent_question_number: question[:parent_question_number],
     )
   end
 end

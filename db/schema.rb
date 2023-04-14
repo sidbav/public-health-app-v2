@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_13_230250) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_14_160955) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,9 +33,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_230250) do
     t.text "question_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "is_parent_of_field"
+    t.text "child"
     t.text "option_selected_to_display_child"
-    t.boolean "has_parent_field", default: false
+    t.string "parent_question_number"
     t.index ["survey_id", "language"], name: "index_questions_on_survey_id_and_language"
     t.index ["survey_id"], name: "index_questions_on_survey_id"
   end
