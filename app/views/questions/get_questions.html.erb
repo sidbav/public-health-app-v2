@@ -11,15 +11,15 @@
       <% question.options_list.each_with_index do |option, index| %>
 
       <% if question.is_parent_of_field == nil %>
-        <%= radio_button_tag "answers[#{question.id}]", option, false%>
+        <%= radio_button_tag "answers[#{question.question_number}]", option, false, data: { option_index: index }%>
       <%else %>
         <% if option == question.option_selected_to_display_child %>
-          <%= radio_button_tag "answers[#{question.id}]", option, false, data: { show_question: question.is_parent_of_field } %>
+          <%= radio_button_tag "answers[#{question.question_number}]", option, false, data: { show_question: question.is_parent_of_field, option_index: index } %>
         <%else %>
-          <%= radio_button_tag "answers[#{question.id}]", option, false, data: { hide_question: question.is_parent_of_field } %>
+          <%= radio_button_tag "answers[#{question.question_number}]", option, false, data: { hide_question: question.is_parent_of_field, option_index: index } %>
         <% end %>
       <% end %>
-      <%= label_tag "answers[#{question.id}][#{index}]", option %>
+      <%= label_tag "answers[#{question.question_number}][#{index}]", option %>
       <br>
     <% end %>
   </div>
@@ -28,47 +28,107 @@
 <button id="submit-button">Submit</button>
 
 <script>
-  $(document).ready(function() {
-    $('#submit-button').click(function() {
-      var allQuestionsAnswered = false;
-      $('.question').each(function() {
-        var questionAnswered = false;
-        $(this).find('input[type="radio"]').each(function() {
-          if ($(this).is(':checked')) {
-            questionAnswered = true;
-            return false;
-          }
-        });
-        if (!questionAnswered) {
-          allQuestionsAnswered = false;
-          return false;
+  document.addEventListener("DOMContentLoaded", function() {
+    const submitButton = document.getElementById("submit-button");
+    submitButton.addEventListener("click", function() {
+      const data = [];
+      var completeSurvey = true;
+      <% @questions.each do |question| %>
+        // var question_div=document.getElementById("<%=question.question_number%>");
+        // var question_div = $('#' + <%=question.question_number%>);
+        // console.log(question_div)
+        var questionNumber = <%= question.question_number %>;
+        var optionDOM = document.querySelector('input[name="answers[<%= question.question_number %>]"]:checked')
+        console.log(optionDOM)
+
+        if (optionDOM === null) {
+          console.log('optionDOM is null')
+          completeSurvey = false;
+          alert('Survey is not done');
+          return;
+        } else {
+          console.log('some value was selected');
         }
-      });
-      
 
+        var option = $(optionDOM);
+        var dataAttrs = option.data();
+        var optionValue = option.val();
+        console.log(optionValue, dataAttrs);
 
+        // if (dataAttrs === undefined)
+        //   console.log('no option selected')
+        // else
+        //   console.log(dataAttrs['optionIndex'])
 
-      if (allQuestionsAnswered) {
-        var answers = $('form').serialize();
+        var optionIndex = dataAttrs['optionIndex'];
+        
+        if (!<%=question.has_parent_field%> & optionValue == '<%= question.option_selected_to_display_child %>'){
+          var dataAttrs = $(document.querySelector('input[name="answers[<%= question.is_parent_of_field %>]"]:checked')).data();
+          if (dataAttrs === undefined)
+            console.log('CHILD no option selected')
+          else
+            console.log('CHILD', dataAttrs['optionIndex'])
+        }
+        // var isParentOfField = <%= question.is_parent_of_field.nil? ? 'null' : question.is_parent_of_field %>;
+        // data.push([questionNumber, optionSelected, displayChild, isParentOfField]);
+      <% end %>
 
-        $.ajax({
-          url: '/responses',
-          type: 'POST',
-          data: answers,
-          success: function() {
-            window.location.href = '/surveys';
-          }
-        });
-        alert('response saved');
-      } else {
-        notice('Please answer all questions.');
-      }
+      console.log(data);
     });
+  });
 
+  $(document).ready(function() {
+    // $('#submit-button').click(function() {
+      
+      
+    //   var allQuestionsAnswered = true;
+    //   console.log('Inside the submit');
+    //   <% @questions.each do |question| %>
+    //     var questionElement = $('#<%= question.question_number %>');
+    //     console.log(questionElement.data('question_number'))
+    //     var questionAnswered = false;
+    //     if (!<%= question.has_parent_field %>) {
+    //       questionElement.find('input[type="radio"]').each(function() {
+    //         if ($(this).is(':checked')) {
+    //           questionAnswered = true;
+    //           return false;
+    //         }
+    //       });
+    //     } else {
+    //       console.log(questionElement.data('question_number'))
+    //       var parentQuestionNumber = questionElement.data('question_number').slice(0, -1);
+    //       $('#' + parentQuestionNumber + ' input[type=radio]').each(function() {
+    //         if ($(this).is(':checked')) {
+    //           questionAnswered = true;
+    //           return false;
+    //         }
+    //       });
+    //     }
+    //     if (!questionAnswered) {
+    //       console.log('question not answered',<%= question.question_number %>);
+    //       allQuestionsAnswered = false;
+    //     }
+    //   <% end %>
 
+    //   if (allQuestionsAnswered) {
+    //     var answers = $('form').serialize();
 
+    //     $.ajax({
+    //       url: '/responses',
+    //       type: 'POST',
+    //       data: answers,
+    //       success: function() {
+    //         window.location.href = '/surveys';
+    //       }
+    //     });
+    //     alert('response saved');
+    //   } else {
+    //     alert('Please answer all questions.');
+    //   }
+
+    // });
     $('input[type="radio"]').click(function() {
-      console.log('Hello world')
+      // console.log('Hello world')
       var showQuestionAttr = $(this).data('showQuestion');
       var hideQuestionAttr = $(this).data('hideQuestion');
 
