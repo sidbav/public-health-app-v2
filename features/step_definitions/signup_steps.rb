@@ -12,7 +12,6 @@ And /I enter valid patient signup information/ do
   fill_in "user[first_name]", with: "First"
   fill_in "user[last_name]", with: "Last"
   fill_in "user[email]", with: "first_last@gmail.com"
-  select "Male", :from => "user[gender]"
   fill_in "user[phone_number]", with: "1231231234"
   fill_in "user[address_line_1]", with: "123 Street Drive"
   fill_in "user[address_line_2]", with: "APT 123"
