@@ -11,9 +11,9 @@ Given /the following questions exist/ do |questions_table|
       options_list: options,
       option_points_list: options_points,
       question_number: question[:question_number],
-      child: question[:child],
-      option_selected_to_display_child: question[:option_selected_to_display_child],
-      parent_question_number: question[:parent_question_number],
+      child: question[:child] == '<null>' ? nil : question[:child],
+      option_selected_to_display_child: question[:option_selected_to_display_child] == '<null>' ? nil : question[:option_selected_to_display_child],
+      parent_question_number: question[:parent_question_number] == '<null>' ? nil : question[:parent_question_number],
     )
   end
 end

@@ -34,29 +34,29 @@
       var answers_data = [];
       var completeSurvey = true;
       <% @questions.each do |question| %>
-        
-        var questionNumber = <%= question.question_number %>;
+
+        var questionNumber = "<%= question.question_number %>";
         var optionDOM = document.querySelector('input[name="answers[<%= question.question_number %>]"]:checked');
         // console.log(optionDOM);
-        
+
         check_req=false;
         if ("<%= question.parent_question_number %>" == ""){
           check_req=true;
-          
+
         }else{
           // console.log($(document.querySelector('input[name="answers[<%= question.parent_question_number %>]"]:checked')).data());
           var parent_show_quest=$(document.querySelector('input[name="answers[<%= question.parent_question_number %>]"]:checked')).data('showQuestion');
-          
+
           if (parent_show_quest){
             console.log("child shown")
             check_req=true
-            
+
           }else{
             console.log("child not shown")
-            
+
           }
         }
-        console.log(optionDOM);   
+        console.log(optionDOM);
         if (check_req){
           if (optionDOM === null) {
             console.log('Question not answered', questionNumber)
@@ -83,9 +83,7 @@
   });
 
   $(document).ready(function() {
-    
     $('input[type="radio"]').click(function() {
-      // console.log('Hello world')
       var showQuestionAttr = $(this).data('showQuestion');
       var hideQuestionAttr = $(this).data('hideQuestion');
 
@@ -97,4 +95,5 @@
       }
     });
   });
+
 </script>
