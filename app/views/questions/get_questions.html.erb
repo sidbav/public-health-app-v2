@@ -72,9 +72,10 @@
 
         var option = $(optionDOM);
         var dataAttrs = option.data();
+        var optionIndex = dataAttrs === undefined ? undefined : dataAttrs['optionIndex'];
         var optionValue = option.val();
         // console.log(optionValue, dataAttrs);
-        answers_data.push([questionNumber, optionValue]);
+        answers_data.push([questionNumber, optionValue, optionIndex]);
 
       <% end %>
 
