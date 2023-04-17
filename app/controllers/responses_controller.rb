@@ -26,11 +26,17 @@ class ResponsesController < ApplicationController
       answers_data.each do |answer|
         question_number = answer[1][0]
         puts question_number
-        option_index = answer[1][1].to_i
         question = Question.find_by(survey_id: survey.id, question_number: question_number)
 
         # get the option_points_list and option_text_list for the question
         option_points_list = question.option_points_list
+        option_index = answer[1][1]
+
+        if !option_index.present?
+          next
+        else
+          option_index = option_index.to_i
+        end
 
 
         # get the response_score and response_option_number for the answer
