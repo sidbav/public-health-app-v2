@@ -39,8 +39,8 @@ class ResponsesController < ApplicationController
         response.save
       end
   
-      # send a success response back to the client
-      redirect_to '/surveys', notice: 'Responses saved successfully.'
+      render json: { success: true }
+      # redirect_to '/surveys', notice: 'Responses saved successfully.'
       
     end
 

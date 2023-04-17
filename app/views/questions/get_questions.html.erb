@@ -44,7 +44,7 @@
           check_req=true;
 
         }else{
-          // console.log($(document.querySelector('input[name="answers[<%= question.parent_question_number %>]"]:checked')).data());
+          
           var parent_show_quest=$(document.querySelector('input[name="answers[<%= question.parent_question_number %>]"]:checked')).data('showQuestion');
 
           if (parent_show_quest){
@@ -79,10 +79,10 @@
 
       <% end %>
 
-      console.log(answers_data);
+      // console.log(answers_data);
 
       // send answers_data via ajax request
-      // console.log(<%= @survey %>, <%= current_user.id %>);
+
       var survey_id = <%= @survey.id %>;
       var user_id = <%= current_user.id %>;
 
@@ -99,8 +99,9 @@
           authenticity_token: csrftoken
         },
         success: function(response) {
-          console.log("Answers saved successfully");
-          
+          console.log("Responses saved successfully");
+          alert('Responses saved successfully');
+          window.location = "/surveys";
         },
         error: function(xhr) {
           console.log("Error saving answers: " + xhr.statusText);
