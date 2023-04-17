@@ -1,4 +1,4 @@
-<h1><%= @survey.name %></h1>
+<h1><%= @survey.survey_name %></h1>
 <h2>Language: <%= @language %></h2>
 
 <% @questions.each do |question| %>
@@ -75,11 +75,37 @@
         var optionIndex = dataAttrs === undefined ? undefined : dataAttrs['optionIndex'];
         var optionValue = option.val();
         // console.log(optionValue, dataAttrs);
-        answers_data.push([questionNumber, optionValue, optionIndex]);
+        answers_data.push([questionNumber, optionIndex]);
 
       <% end %>
 
       console.log(answers_data);
+
+      // send answers_data via ajax request
+      // console.log(<%= @survey %>, <%= current_user.id %>);
+      var survey_id = <%= @survey.id %>;
+      var user_id = <%= current_user.id %>;
+
+
+      var csrftoken = $('meta[name=csrf-token]').attr('content');
+
+      $.ajax({
+        type: "POST",
+        url: "/save_answers",
+        data: {
+          survey_id: survey_id,
+          user_id: user_id,
+          answers_data: answers_data,
+          authenticity_token: csrftoken
+        },
+        success: function(response) {
+          console.log("Answers saved successfully");
+          
+        },
+        error: function(xhr) {
+          console.log("Error saving answers: " + xhr.statusText);
+        }
+      });
     });
   });
 
