@@ -1,8 +1,8 @@
-<h1><%= @survey.name %></h1>
+<h1><%= @survey.survey_name %></h1>
 <h2>Language: <%= @language %></h2>
 
 <% @questions.each do |question| %>
-  <% if question.has_parent_field == false %>
+  <% if !question.parent_question_number.present? %>
     <div id=<%= question.question_number %>>
   <%else %>
     <div id=<%= question.question_number %> style="display:none" >
@@ -10,25 +10,108 @@
     <h3><%= question.question_number %>. <%= question.question_text %></h3>
       <% question.options_list.each_with_index do |option, index| %>
 
-      <% if question.is_parent_of_field == nil %>
-        <%= radio_button_tag "answers[#{question.id}]", option, false%>
+      <% if question.child == nil %>
+        <%= radio_button_tag "answers[#{question.question_number}]", option, false, data: { option_index: index }%>
       <%else %>
         <% if option == question.option_selected_to_display_child %>
-          <%= radio_button_tag "answers[#{question.id}]", option, false, data: { show_question: question.is_parent_of_field } %>
+          <%= radio_button_tag "answers[#{question.question_number}]", option, false, data: { show_question: question.child, option_index: index } %>
         <%else %>
-          <%= radio_button_tag "answers[#{question.id}]", option, false, data: { hide_question: question.is_parent_of_field } %>
+          <%= radio_button_tag "answers[#{question.question_number}]", option, false, data: { hide_question: question.child, option_index: index } %>
         <% end %>
       <% end %>
-      <%= label_tag "answers[#{question.id}][#{index}]", option %>
+      <%= label_tag "answers[#{question.question_number}][#{index}]", option %>
       <br>
     <% end %>
   </div>
 <% end %>
 
+<button id="submit-button">Submit</button>
+
 <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const submitButton = document.getElementById("submit-button");
+    submitButton.addEventListener("click", function() {
+      var answers_data = [];
+      var completeSurvey = true;
+      <% @questions.each do |question| %>
+
+        var questionNumber = "<%= question.question_number %>";
+        var optionDOM = document.querySelector('input[name="answers[<%= question.question_number %>]"]:checked');
+        // console.log(optionDOM);
+
+        check_req=false;
+        if ("<%= question.parent_question_number %>" == ""){
+          check_req=true;
+
+        }else{
+          
+          var parent_show_quest=$(document.querySelector('input[name="answers[<%= question.parent_question_number %>]"]:checked')).data('showQuestion');
+
+          if (parent_show_quest){
+            console.log("child shown")
+            check_req=true
+
+          }else{
+            console.log("child not shown")
+
+          }
+        }
+        console.log(optionDOM);
+        if (check_req){
+          if (optionDOM === null) {
+            console.log('Question not answered', questionNumber)
+            completeSurvey = false;
+            alert('Survey is not completed, please answer all questions');
+            return;
+          } else {
+            console.log('some value was selected',questionNumber);
+          }
+        }else{
+            console.log('check not req',questionNumber);
+        }
+
+        var option = $(optionDOM);
+        var dataAttrs = option.data();
+        var optionIndex = dataAttrs === undefined ? undefined : dataAttrs['optionIndex'];
+        var optionValue = option.val();
+        // console.log(optionValue, dataAttrs);
+        answers_data.push([questionNumber, optionIndex]);
+
+      <% end %>
+
+      // console.log(answers_data);
+
+      // send answers_data via ajax request
+
+      var survey_id = <%= @survey.id %>;
+      var user_id = <%= current_user.id %>;
+
+
+      var csrftoken = $('meta[name=csrf-token]').attr('content');
+
+      $.ajax({
+        type: "POST",
+        url: "/save_answers",
+        data: {
+          survey_id: survey_id,
+          user_id: user_id,
+          answers_data: answers_data,
+          authenticity_token: csrftoken
+        },
+        success: function(response) {
+          console.log("Responses saved successfully");
+          alert('Responses saved successfully');
+          window.location = "/surveys";
+        },
+        error: function(xhr) {
+          console.log("Error saving answers: " + xhr.statusText);
+        }
+      });
+    });
+  });
+
   $(document).ready(function() {
     $('input[type="radio"]').click(function() {
-      console.log('Hello world')
       var showQuestionAttr = $(this).data('showQuestion');
       var hideQuestionAttr = $(this).data('hideQuestion');
 
@@ -40,4 +123,5 @@
       }
     });
   });
+
 </script>

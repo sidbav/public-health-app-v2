@@ -59,7 +59,7 @@ class QuestionsController < ApplicationController
   # end
 
   def get_questions
-    @survey = Survey.where(survey_id: params[:survey_id])
+    @survey = Survey.find(params[:survey_id])
     @language = params[:language]
     @questions = Question.where(survey_id: params[:survey_id], language: @language)
   end
