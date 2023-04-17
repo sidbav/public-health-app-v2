@@ -71,7 +71,7 @@ survey2_questions = [
     options_list: ["Often True","Sometimes True","Never True","Don't Know or Refused"],
     option_points_list: [1,1,0,0],
     question_number: "HH3",
-    
+
   },
   {
     survey_id: 2,
@@ -80,7 +80,7 @@ survey2_questions = [
     options_list: ["Often True","Sometimes True","Never True","Don't Know or Refused"],
     option_points_list: [1,1,0,0],
     question_number: "HH4",
-    
+
   },
   {
     survey_id: 2,
@@ -91,7 +91,7 @@ survey2_questions = [
     question_number: "AD1",
     child: "AD1a",
     option_selected_to_display_child: "Yes",
-    
+
   },
   {
     survey_id: 2,
@@ -109,7 +109,7 @@ survey2_questions = [
     options_list: ["Yes","No","Don't Know"],
     option_points_list: [1,0,0],
     question_number: "AD2",
-    
+
   },
   {
     survey_id: 2,
@@ -118,7 +118,7 @@ survey2_questions = [
     options_list: ["Yes","No","Don't Know"],
     option_points_list: [1,0,0],
     question_number: "AD3",
-    
+
   }
 ]
 
@@ -171,107 +171,107 @@ end
 user = User.first
 time1 = Time.now
 
-food_insecurce_responses = [
-  {
-    question_number: "HH3",
-    response_option_number: 0,
-    response_score: 1
-  },
-  {
-    question_number: "HH4",
-    response_option_number: 0,
-    response_score: 1
-  },
-  {
-    question_number: "AD1",
-    response_option_number: 0,
-    response_score: 1
-  },
-  {
-    question_number: "AD1a",
-    response_option_number: 0,
-    response_score: 1
-  },
-  {
-    question_number: "AD2",
-    response_option_number: 0,
-    response_score: 1
-  },
-  {
-    question_number: "AD3",
-    response_option_number: 0,
-    response_score: 1
-  },
-]
+# food_insecurce_responses = [
+#   {
+#     question_number: "HH3",
+#     response_option_number: 0,
+#     response_score: 1
+#   },
+#   {
+#     question_number: "HH4",
+#     response_option_number: 0,
+#     response_score: 1
+#   },
+#   {
+#     question_number: "AD1",
+#     response_option_number: 0,
+#     response_score: 1
+#   },
+#   {
+#     question_number: "AD1a",
+#     response_option_number: 0,
+#     response_score: 1
+#   },
+#   {
+#     question_number: "AD2",
+#     response_option_number: 0,
+#     response_score: 1
+#   },
+#   {
+#     question_number: "AD3",
+#     response_option_number: 0,
+#     response_score: 1
+#   },
+# ]
 
-food_insecurce_responses.each do |response|
-  Response.create!(
-    survey: survey2,
-    user: user,
-    question_number: response[:question_number],
-    response_option_number: response[:response_option_number],
-    response_score: response[:response_score],
-    time_submitted: time1
-  )
-end
+# food_insecurce_responses.each do |response|
+#   Response.create!(
+#     survey: survey2,
+#     user: user,
+#     question_number: response[:question_number],
+#     response_option_number: response[:response_option_number],
+#     response_score: response[:response_score],
+#     time_submitted: time1
+#   )
+# end
 
-SurveyResult.create!(
-  survey: survey2,
-  users_id: user.id,
-  total_score: 6,
-  time_submitted: time1,
-  categories_id: 4
-)
+# SurveyResult.create!(
+#   survey: survey2,
+#   users_id: user.id,
+#   total_score: 6,
+#   time_submitted: time1,
+#   categories_id: 4
+# )
 
 user = User.second
-food_securce_responses = [
-  {
-    question_number: "HH3",
-    response_option_number: 2,
-    response_score: 0
-  },
-  {
-    question_number: "HH4",
-    response_option_number: 2,
-    response_score: 0
-  },
-  {
-    question_number: "AD1",
-    response_option_number: 1,
-    response_score: 0
-  },
-  {
-    question_number: "AD1a",
-    response_option_number: 2,
-    response_score: 0
-  },
-  {
-    question_number: "AD2",
-    response_option_number: 1,
-    response_score: 0
-  },
-  {
-    question_number: "AD3",
-    response_option_number: 1,
-    response_score: 0
-  },
-]
+# food_securce_responses = [
+#   {
+#     question_number: "HH3",
+#     response_option_number: 2,
+#     response_score: 0
+#   },
+#   {
+#     question_number: "HH4",
+#     response_option_number: 2,
+#     response_score: 0
+#   },
+#   {
+#     question_number: "AD1",
+#     response_option_number: 1,
+#     response_score: 0
+#   },
+#   {
+#     question_number: "AD1a",
+#     response_option_number: 2,
+#     response_score: 0
+#   },
+#   {
+#     question_number: "AD2",
+#     response_option_number: 1,
+#     response_score: 0
+#   },
+#   {
+#     question_number: "AD3",
+#     response_option_number: 1,
+#     response_score: 0
+#   },
+# ]
 
-food_securce_responses.each do |response|
-  Response.create!(
-    survey: survey2,
-    user: user,
-    question_number: response[:question_number],
-    response_option_number: response[:response_option_number],
-    response_score: response[:response_score],
-    time_submitted: time1
-  )
-end
+# food_securce_responses.each do |response|
+#   Response.create!(
+#     survey: survey2,
+#     user: user,
+#     question_number: response[:question_number],
+#     response_option_number: response[:response_option_number],
+#     response_score: response[:response_score],
+#     time_submitted: time1
+#   )
+# end
 
-SurveyResult.create!(
-  survey: survey2,
-  users_id: user.id,
-  total_score: 0,
-  time_submitted: time1,
-  categories_id: 1
-)
+# SurveyResult.create!(
+#   survey: survey2,
+#   users_id: user.id,
+#   total_score: 0,
+#   time_submitted: time1,
+#   categories_id: 1
+# )
