@@ -1,5 +1,4 @@
 <p style="color: green"><%= notice %></p>
-
 <h1>Local Resources near <%= current_user.zip %> </h1>
 <div id="resources">
   <% @local_resources.each do |resource| %>
@@ -9,7 +8,7 @@
     <ul>
       <% if resource.website.present? %>
         <li>
-          Website: <%= link_to "#{resource.website}", "#{resource.website}" %>
+          Website: <%= link_to "#{resource.website}", "#{resource.website}", target: :_blank %>
         </li>
       <% end %>
       <% if resource.phone_number.present? %>
@@ -19,12 +18,12 @@
       <% end %>
       <% if resource.email.present? %>
         <li>
-          Email: <%= link_to "#{resource.email}", "mailto:#{resource.email}" %>
+          Email: <%= link_to "#{resource.email}", "mailto:#{resource.email}"%>
         </li>
       <% end %>
       <% if resource.address.present? %>
         <li>
-          Address: <%= link_to "#{resource.address}", "https://www.google.com/maps/dir/?api=1&destination=#{CGI.escape(resource.address)}" %>
+          Address: <%= link_to "#{resource.address}", "https://www.google.com/maps/dir/?api=1&destination=#{CGI.escape(resource.address)}",target: :_blank  %>
         </li>
       <% end %>
     </ul>
@@ -32,4 +31,4 @@
 </div>
 
 <h1> Google Search Results for "Food Banks near <%=current_user.zip %>" </h1>
-<%= link_to "Food Resources", "https://www.google.com/maps/search/Food+bank+resources+near+#{CGI.escape(current_user.zip)}" %>
+<%= link_to "Food Resources", "https://www.google.com/maps/search/Food+bank+resources+near+#{CGI.escape(current_user.zip)}", target: :_blank %>
