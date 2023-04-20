@@ -1,7 +1,8 @@
 <% if @responses.present? %>
   <h2> Most Recent Response to the "<%= @survey.survey_name%>" Survey</h2>
   <p> Survey Completed on <%= @latest_time_submitted.localtime.strftime("%B %d, %Y")%></p>
-  <p> Catgeory: <%= @category[:category] %> </p>
+  <p> Category: <%= @category[:category] %> </p>
+  <p> <%= link_to "See Resources", resources_path %> </p>
   <%= form_tag survey_responses_path(@survey, language: @language), method: :get do %>
       <%= select_tag :language, options_for_select(@survey.languages, @language) %>
       <%= submit_tag "Change Language" %>

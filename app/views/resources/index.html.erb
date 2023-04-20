@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Local Resources to Zip Code <%= current_user.zip %> </h1>
+<div id="resources">
+  <% @local_resources.each do |resource| %>
+    <h2>
+      <%= resource.name %>
+    </h2>
+    <ul>
+      <% if resource.website.present? %>
+        <li>
+          Website: <%= link_to "#{resource.website}", "#{resource.website}" %>
+        </li>
+      <% end %>
+      <% if resource.phone_number.present? %>
+        <li>
+          Phone Number: <%= resource.phone_number %>
+        </li>
+      <% end %>
+      <% if resource.email.present? %>
+        <li>
+          Email: <%= link_to "#{resource.email}", "mailto:#{resource.email}" %>
+        </li>
+      <% end %>
+      <% if resource.address.present? %>
+        <li>
+          Address: <%= link_to "#{resource.address}", "https://www.google.com/maps/dir/?api=1&destination=#{CGI.escape(resource.address)}" %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

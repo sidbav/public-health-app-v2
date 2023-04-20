@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :resources
   post '/save_answers', to: 'responses#create', as: 'save_answers'
   resources :surveys do
     resources :responses
@@ -16,5 +17,5 @@ Rails.application.routes.draw do
   get 'home/index'
   root "home#index"
 
-  
+
 end

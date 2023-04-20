@@ -1,0 +1,2 @@
+class LocalResource < ApplicationRecord
+end
