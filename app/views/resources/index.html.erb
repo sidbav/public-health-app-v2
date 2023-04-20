@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Local Resources to Zip Code <%= current_user.zip %> </h1>
+<h1>Local Resources near <%= current_user.zip %> </h1>
 <div id="resources">
   <% @local_resources.each do |resource| %>
     <h2>
@@ -30,3 +30,6 @@
     </ul>
   <% end %>
 </div>
+
+<h1> Google Search Results for "Food Banks near <%=current_user.zip %>" </h1>
+<%= link_to "Food Resources", "https://www.google.com/maps/search/Food+bank+resources+near+#{CGI.escape(current_user.zip)}" %>
