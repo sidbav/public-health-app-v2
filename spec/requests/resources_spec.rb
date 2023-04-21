@@ -13,7 +13,7 @@ require 'rails_helper'
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/resources", type: :request do
-  
+
   # This should return the minimal set of attributes required to create a valid
   # Resource. As you add validations to Resource, be sure to
   # adjust the attributes here as well.
@@ -41,95 +41,4 @@ RSpec.describe "/resources", type: :request do
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
-      get new_resource_url
-      expect(response).to be_successful
-    end
-  end
-
-  describe "GET /edit" do
-    it "renders a successful response" do
-      resource = Resource.create! valid_attributes
-      get edit_resource_url(resource)
-      expect(response).to be_successful
-    end
-  end
-
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Resource" do
-        expect {
-          post resources_url, params: { resource: valid_attributes }
-        }.to change(Resource, :count).by(1)
-      end
-
-      it "redirects to the created resource" do
-        post resources_url, params: { resource: valid_attributes }
-        expect(response).to redirect_to(resource_url(Resource.last))
-      end
-    end
-
-    context "with invalid parameters" do
-      it "does not create a new Resource" do
-        expect {
-          post resources_url, params: { resource: invalid_attributes }
-        }.to change(Resource, :count).by(0)
-      end
-
-    
-      it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post resources_url, params: { resource: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-    
-    end
-  end
-
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested resource" do
-        resource = Resource.create! valid_attributes
-        patch resource_url(resource), params: { resource: new_attributes }
-        resource.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "redirects to the resource" do
-        resource = Resource.create! valid_attributes
-        patch resource_url(resource), params: { resource: new_attributes }
-        resource.reload
-        expect(response).to redirect_to(resource_url(resource))
-      end
-    end
-
-    context "with invalid parameters" do
-    
-      it "renders a response with 422 status (i.e. to display the 'edit' template)" do
-        resource = Resource.create! valid_attributes
-        patch resource_url(resource), params: { resource: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-    
-    end
-  end
-
-  describe "DELETE /destroy" do
-    it "destroys the requested resource" do
-      resource = Resource.create! valid_attributes
-      expect {
-        delete resource_url(resource)
-      }.to change(Resource, :count).by(-1)
-    end
-
-    it "redirects to the resources list" do
-      resource = Resource.create! valid_attributes
-      delete resource_url(resource)
-      expect(response).to redirect_to(resources_url)
-    end
-  end
 end

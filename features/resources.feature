@@ -1,4 +1,9 @@
-Background: surveys and users in database
+Feature: Accessing Resources questions
+As a user
+I want to be access resources
+So that I can get the help I need
+
+Background: surveys, users, and local resources in database
   Given the following surveys exist:
   | id | survey_name | survey_category | languages |
   | 1 | U.S. Household Food Security Survey | Food Security | English, Spanish, Chinese |
@@ -22,3 +27,4 @@ Scenario: User is logged in and can access the resource page
   When I click on the "Resources" link
   Then I should see "Islamic Community of Bryan/College Station (ICBCS)"
   And I should not see "ANTIOCH COMMUNITY CHURCH"
+  And I should see "Food Banks near 77840"
