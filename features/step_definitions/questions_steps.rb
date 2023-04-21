@@ -36,7 +36,8 @@ And /I should not see "(.*)"/ do |message|
   expect(page).not_to have_content(message)
 end
 
-When /I select Option "(.*)" for Question 1 for the Testing the Hide\/Show Functionality Survey/ do |option|
-  radio_button = page.all('input[type="radio"]').find { |radio| radio.value == option }
-  radio_button.click
-end
+# When /I select Option "(.*)" for Question 1 for the Testing the Hide\/Show Functionality Survey/ do |option|
+#   radio_button = page.all('input[type="radio"]').find { |radio| radio.value == option }
+#   radio_button.click
+# end
+
