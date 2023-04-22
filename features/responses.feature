@@ -29,6 +29,8 @@ Given the following questions exist:
 | 3         | English | You should see this question anyways | Yes I do, No I don't | 1, 0 | 2 |<null>|<null>|<null>|
 
 
+
+
 @javascript
 Scenario: Submitting Correct Response
   Given I am logged in
@@ -42,6 +44,7 @@ Scenario: Submitting Correct Response
   And I click the Submit button 
    Then I should see an alert "Responses saved successfully"
 
+@javascript
 Scenario: Submitting Wrong Response
   Given I am logged in
   When I visit home page
@@ -52,10 +55,6 @@ Scenario: Submitting Wrong Response
   When I select Option "No" for Question 1 for the Testing Survey
   And I click the Submit button
     Then I should see an alert "Survey is not completed, please answer all questions"
-
-
-
-
 
 
 
