@@ -30,29 +30,33 @@ Given the following questions exist:
 
 
 @javascript
+Scenario: Submitting Correct Response
+  Given I am logged in
+  When I visit home page
+  When I click on the survey link
+  Then I should see a table Surveys
+  When I click on the "Take Survey" link on the third row
+  And I click on the "English" link
+  When I select Option "No" for Question 1 for the Testing Survey
+  And I select Option "Yes I do" for Question 2 for the Testing Survey
+  And I click the Submit button 
+   Then I should see an alert "Responses saved successfully"
+
 Scenario: Submitting Wrong Response
   Given I am logged in
+  When I visit home page
   When I click on the survey link
   Then I should see a table Surveys
   When I click on the "Take Survey" link on the third row
   And I click on the "English" link
   When I select Option "No" for Question 1 for the Testing Survey
   And I click the Submit button
-    Then I should see a alert "Survey is not completed, please answer all questions"
+    Then I should see an alert "Survey is not completed, please answer all questions"
 
 
 
 
-Scenario: Submitting Correct Response
-  Given I am logged in
-  When I click on the survey link
-  Then I should see a table Surveys
-  When I click on the "Take Survey" link on the first row
-  And I click on the "English" link
-  When I select Option "No" for Question 1 for the Testing Survey
-  And I select Option "Yes I do" for Question 2 for the Testing Survey
-  And I click the Submit button 
-   Then I should see a alert "Responses saved successfully"
+
 
 
   

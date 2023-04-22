@@ -13,7 +13,7 @@ Given the following surveys exist:
 | id | survey_name | survey_category | languages |
 | 1 | U.S. Household Food Security Survey | Food Security | English, Spanish, Chinese |
 | 2 |Six-Item Short Form of the Food Security Survey | Food Security | English |
-| 3 | Testing the Hide/Show Functionality | Testing Purposes | English |
+| 3 | Testing | Testing Purposes | English |
 
 
 
@@ -47,7 +47,7 @@ Scenario: Hiding and Viewing Questions Functionality
   When I click on the "Take Survey" link on the third row
   And I click on the "English" link
   Then I should not see "1A."
-  When I select Option "Yes" for Question 1 for the Testing the Hide/Show Functionality Survey
+  When I select Option "Yes" for Question 1 for the Testing Survey
     Then I should see "1A."
-  When I select Option "No" for Question 1 for the Testing the Hide/Show Functionality Survey
+  When I select Option "No" for Question 1 for the Testing Survey
     Then I should not see "1A."
