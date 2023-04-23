@@ -1,6 +1,6 @@
-Feature: Answering survey questions
+Feature: Submitting survey responses correctly
 As a user
-I want to be able to answer the questions
+I want to be able to submit the responses
 So that I can get a score for the questions on the survey
 Background: Question and surveys and users in database:
 
@@ -30,24 +30,32 @@ Given the following questions exist:
 
 
 
-Scenario: User can view the questions
-  Given I am logged in
-  When I click on the survey link
-  Then I should see a table Surveys
-  When I click on the "Take Survey" link on the first row
-  Then I should see the "English", "Spanish", and "Chinese" links
-  And I click on the "English" link
-  Then I should be able to see the questions in English
 
 @javascript
-Scenario: Hiding and Viewing Questions Functionality
+Scenario: Submitting Correct Response
   Given I am logged in
+  When I visit home page
   When I click on the survey link
   Then I should see a table Surveys
   When I click on the "Take Survey" link on the third row
   And I click on the "English" link
-  Then I should not see "1A."
-  When I select Option "Yes" for Question 1 for the Testing Survey
-    Then I should see "1A."
   When I select Option "No" for Question 1 for the Testing Survey
-    Then I should not see "1A."
+  And I select Option "Yes I do" for Question 2 for the Testing Survey
+  And I click the Submit button 
+   Then I should see an alert "Responses saved successfully"
+
+@javascript
+Scenario: Submitting Wrong Response
+  Given I am logged in
+  When I visit home page
+  When I click on the survey link
+  Then I should see a table Surveys
+  When I click on the "Take Survey" link on the third row
+  And I click on the "English" link
+  When I select Option "No" for Question 1 for the Testing Survey
+  And I click the Submit button
+    Then I should see an alert "Survey is not completed, please answer all questions"
+
+
+
+  

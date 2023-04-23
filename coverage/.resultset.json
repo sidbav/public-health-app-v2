@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/user.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -12,27 +12,27 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/application_record.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/models/survey.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/question.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/models/question.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/application_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -42,227 +42,337 @@
           1,
           null,
           1,
-          72,
+          76,
           null,
-          67,
+          71,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/application_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/home_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/questions_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/responses_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/survey_results_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/surveys_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/home_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
           null,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/surveys_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/helpers/home_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/helpers/questions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/helpers/responses_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/helpers/survey_results_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/helpers/surveys_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/surveys_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          7,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/questions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           1,
           4,
-          null,
-          null,
-          null,
-          1,
-          null,
+          4,
+          4,
           null,
           null,
           1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/responses_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
           0,
           null,
           null,
           null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           1,
           3,
           3,
+          3,
           null,
+          null,
+          3,
+          3,
+          null,
+          3,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          2,
+          2,
+          null,
+          null,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
           null,
           1,
           null,
           null,
           null,
           null,
+          1,
           null,
-          null,
-          null,
-          null,
-          null,
+          1,
+          0,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/questions_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/models/response.rb": {
         "lines": [
           1,
           1,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
+          0,
+          0,
+          0,
           null,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/models/category.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/models/survey_result.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
         "lines": [
           null,
           null,
@@ -328,7 +438,7 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/channel.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -338,7 +448,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/connection.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -348,58 +458,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/responses_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null
-        ],
-        "branches": {
-        }
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/survey_results_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/survey_results_controller.rb": {
         "lines": [
           0,
           0,
@@ -414,7 +473,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
         "lines": [
           null,
           null,
@@ -450,7 +509,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
         "lines": [
           null,
           null,
@@ -486,7 +545,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
         "lines": [
           null,
           null,
@@ -526,7 +585,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
         "lines": [
           null,
           null,
@@ -559,7 +618,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
         "lines": [
           null,
           null,
@@ -595,7 +654,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/jobs/application_job.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -608,43 +667,9 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/mailers/application_mailer.rb": {
+      "C:/Users/chinmay/Desktop/Chinmay/SE/public-health-app-v2/app/mailers/application_mailer.rb": {
         "lines": [
           0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/category.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/response.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey_result.rb": {
-        "lines": [
           0,
           0,
           0
@@ -653,6 +678,6 @@
         }
       }
     },
-    "timestamp": 1681580960
+    "timestamp": 1682207493
   }
 }
