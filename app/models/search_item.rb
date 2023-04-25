@@ -1,0 +1,2 @@
+class SearchItem < ApplicationRecord
+end

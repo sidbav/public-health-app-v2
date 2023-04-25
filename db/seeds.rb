@@ -244,3 +244,5 @@ BCS_ZipCodes.each do |zip|
   end
 end
 
+#seed search_items
+item = SearchItem.create!(category: "Food Security", phrase: "Food Banks/Food Distribution Warehouses")
