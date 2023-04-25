@@ -32,3 +32,6 @@
 
 <h1> Google Search Results for "Food Banks near <%=current_user.zip %>" </h1>
 <%= link_to "Food Resources", "https://www.google.com/maps/search/Food+bank+resources+near+#{CGI.escape(current_user.zip)}", target: :_blank %>
+
+<h1> 211texas Search Results for "Food Banks/Food Distribution Warehouses near <%=current_user.zip %>" </h1>
+<%= link_to "Food Resources", "https://www.211texas.org/search/?Search=Food+Banks%2FFood+Distribution+Warehouses&org=72605&Count=5&NameOnly=True&pst=Coverage&sort=Proximity&TaxExact=False&Country=United+States&StateProvince=TX&County=-1&City=-1&PostalCode=#{CGI.escape(current_user.zip)}", target: :_blank %>
