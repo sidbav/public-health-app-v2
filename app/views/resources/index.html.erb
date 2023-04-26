@@ -1,0 +1,56 @@
+<p style="color: green"><%= notice %></p>
+<h1>Local Resources near <%= current_user.zip %> </h1>
+<div id="resources">
+  <% @local_resources.each do |resource| %>
+    <h2>
+      <%= resource.name %>
+    </h2>
+    <ul>
+      <% if resource.website.present? %>
+        <li>
+          Website: <%= link_to "#{resource.website}", "#{resource.website}", target: :_blank %>
+        </li>
+      <% end %>
+      <% if resource.phone_number.present? %>
+        <li>
+          Phone Number: <%= resource.phone_number %>
+        </li>
+      <% end %>
+      <% if resource.email.present? %>
+        <li>
+          Email: <%= link_to "#{resource.email}", "mailto:#{resource.email}"%>
+        </li>
+      <% end %>
+      <% if resource.address.present? %>
+        <li>
+          Address: <%= link_to "#{resource.address}", "https://www.google.com/maps/dir/?api=1&destination=#{CGI.escape(resource.address)}",target: :_blank  %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<h1> Please select a category to see the external resources</h1>
+<%= form_tag resources_path(category: @category), method: :get do %>
+  <%= select_tag :category, options_for_select(SearchItem.distinct.pluck(:category)) %>
+  <%= submit_tag "Choose a Category" %>
+<% end %>
+
+<% if params[:category].present? %>
+  <% category = params[:category] %>
+  <% phrase = SearchItem.find_by(category: category).phrase %>
+  <h2> Google Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+  <%= link_to "#{category} Resources", "https://www.google.com/maps/search/#{phrase.gsub(" ", "+").gsub("/", "%2F")}+near+#{CGI.escape(current_user.zip)}", target: :_blank %>
+
+  <h2> 211texas Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+  <%= link_to "#{category} Resources", "https://www.211texas.org/search/?Search=#{phrase.gsub(" ", "+").gsub("/", "%2F")}&org=72605&Count=5&NameOnly=True&pst=Coverage&sort=Proximity&TaxExact=False&Country=United+States&StateProvince=TX&County=-1&City=-1&PostalCode=#{CGI.escape(current_user.zip)}", target: :_blank %>
+<% else %>
+<% category = "Food Security" %>
+<% phrase = SearchItem.find_by(category: category).phrase %>
+<h2> Google Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+<%= link_to "#{category} Resources", "https://www.google.com/maps/search/#{phrase.gsub(" ", "+").gsub("/", "%2F")}+near+#{CGI.escape(current_user.zip)}", target: :_blank %>
+
+<h2> 211texas Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+<%= link_to "#{category} Resources", "https://www.211texas.org/search/?Search=#{phrase.gsub(" ", "+").gsub("/", "%2F")}&org=72605&Count=5&NameOnly=True&pst=Coverage&sort=Proximity&TaxExact=False&Country=United+States&StateProvince=TX&County=-1&City=-1&PostalCode=#{CGI.escape(current_user.zip)}", target: :_blank %>
+
+<% end %>

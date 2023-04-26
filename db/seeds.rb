@@ -17,7 +17,7 @@ user = User.new(
   address_line_2: 'address',
   city: 'city',
   state: 'state',
-  zip: '12345',
+  zip: '77840',
   phone_number: '1234567890',
   date_of_birth: Date.new(1990, 1, 1),
   confirmed_at: Time.now
@@ -171,107 +171,78 @@ end
 user = User.first
 time1 = Time.now
 
-# food_insecurce_responses = [
-#   {
-#     question_number: "HH3",
-#     response_option_number: 0,
-#     response_score: 1
-#   },
-#   {
-#     question_number: "HH4",
-#     response_option_number: 0,
-#     response_score: 1
-#   },
-#   {
-#     question_number: "AD1",
-#     response_option_number: 0,
-#     response_score: 1
-#   },
-#   {
-#     question_number: "AD1a",
-#     response_option_number: 0,
-#     response_score: 1
-#   },
-#   {
-#     question_number: "AD2",
-#     response_option_number: 0,
-#     response_score: 1
-#   },
-#   {
-#     question_number: "AD3",
-#     response_option_number: 0,
-#     response_score: 1
-#   },
-# ]
-
-# food_insecurce_responses.each do |response|
-#   Response.create!(
-#     survey: survey2,
-#     user: user,
-#     question_number: response[:question_number],
-#     response_option_number: response[:response_option_number],
-#     response_score: response[:response_score],
-#     time_submitted: time1
-#   )
-# end
-
-# SurveyResult.create!(
-#   survey: survey2,
-#   users_id: user.id,
-#   total_score: 6,
-#   time_submitted: time1,
-#   categories_id: 4
-# )
-
 user = User.second
-# food_securce_responses = [
-#   {
-#     question_number: "HH3",
-#     response_option_number: 2,
-#     response_score: 0
-#   },
-#   {
-#     question_number: "HH4",
-#     response_option_number: 2,
-#     response_score: 0
-#   },
-#   {
-#     question_number: "AD1",
-#     response_option_number: 1,
-#     response_score: 0
-#   },
-#   {
-#     question_number: "AD1a",
-#     response_option_number: 2,
-#     response_score: 0
-#   },
-#   {
-#     question_number: "AD2",
-#     response_option_number: 1,
-#     response_score: 0
-#   },
-#   {
-#     question_number: "AD3",
-#     response_option_number: 1,
-#     response_score: 0
-#   },
-# ]
 
-# food_securce_responses.each do |response|
-#   Response.create!(
-#     survey: survey2,
-#     user: user,
-#     question_number: response[:question_number],
-#     response_option_number: response[:response_option_number],
-#     response_score: response[:response_score],
-#     time_submitted: time1
-#   )
-# end
 
-# SurveyResult.create!(
-#   survey: survey2,
-#   users_id: user.id,
-#   total_score: 0,
-#   time_submitted: time1,
-#   categories_id: 1
-# )
+local_resource_BCS = [
+  {
+    name: "Islamic Community of Bryan/College Station (ICBCS)",
+    website: "https://www.icbcs.org/",
+    address: "417 Stasney St, College Station, TX 77840",
+    email: "board@icbcs.org"
+  },
+  {
+    name: "A&M United Methodist Church",
+    website: "https://www.am-umc.org/",
+    address: "417 University Drive, College Station, TX 77840, USA",
+    phone_number: "979-846-8731",
+    email: "office@am-umc.org",
+  },
+  {
+    name: "ANTIOCH COMMUNITY CHURCH",
+    website: "https://www.antiochcs.org/",
+    address: "1803 BRIARCREST DR, BRYAN, TX 77802, USA",
+    phone_number: "(979)703-8411",
+    email: "INFO@ANTIOCHCS.ORG",
+  },
+  {
+    name: "BRAZOS FELLOWSHIP",
+    website: "https://brazosfellowship.com/",
+    address: "226 Southwest Pkwy E, College Station, TX 77840",
+    phone_number: "979.680.8888",
+    email: "email@brazosfellowship.com",
+  },
+  {
+    name: "CENTERAL CHURCH",
+    website: "https://centralbcs.org/",
+    address: "1991 FM 158, COLLEGE STATION, TX US 77845",
+    phone_number: "979.776.9977"
+  },
+  {
+    name: "Christ Chruch",
+    website: "https://www.christchurchcs.org/",
+    address: "4201 State Highway 6 South, College Station, TX 77845",
+    phone_number: "979.690.4673"
+  },
+  {
+    name: "Shri Omkarnath Temple",
+    website: "http://hsbv.org/",
+    address: "23,300 State Hwy. 6 South, Navasota, TX 77868",
+    phone_number: "(979) 307-0304",
+    email: "hsbv.pres@gmail.com"
+  },
+  {
+    name: "Congregation Beth Shalom",
+    website: "https://cbsbcs.org/",
+    address: "101 North Coulter Drive Bryan, TX 77803",
+    phone_number: "(979) 822-2738"
+  },
+]
+
+BCS_ZipCodes = [ "77840", "77841", "77842", "77843", "77845"]
+
+BCS_ZipCodes.each do |zip|
+  local_resource_BCS.each do |resource|
+    LocalResource.create!(
+      zip: zip,
+      name: resource[:name],
+      website: resource[:website],
+      address: resource[:address],
+      phone_number: resource[:phone_number],
+      email: resource[:email],
+    )
+  end
+end
+
+#seed search_items
+item = SearchItem.create!(category: "Food Security", phrase: "Food Banks/Food Distribution Warehouses")

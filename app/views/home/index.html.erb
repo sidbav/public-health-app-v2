@@ -3,6 +3,8 @@
 <h1>Welcome, <%= name %> </h1>
 <% if current_user.present? %>
   <%= link_to 'Surveys', surveys_path %>
+  <br>
+  <%= link_to 'Resources', resources_path %>
 <% else %>
   <p>Please sign in to fill surveys</p>
 <% end %>
