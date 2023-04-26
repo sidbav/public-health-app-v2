@@ -1,11 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/models/user.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/models/user.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -16,56 +12,40 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/models/application_record.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/models/application_record.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/models/survey.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/models/survey.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey.rb": {
         "lines": [
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/models/question.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/models/question.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/question.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/application_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/models/survey_result.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey_result.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "C:/public health app/public-health-app-v2/app/models/category.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/category.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/public health app/public-health-app-v2/app/controllers/application_controller.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -75,103 +55,57 @@
           1,
           null,
           1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          78,
+          82,
           null,
-          73,
-=======
-          2,
-          null,
-          2,
->>>>>>> 1677784 (display category testcase)
-=======
-          78,
-          null,
-          73,
->>>>>>> 74a19ee (working testcases)
-=======
-          80,
-          null,
-          75,
->>>>>>> 5cc1666 (working testcases - 2)
+          77,
           null,
           null,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/helpers/application_helper.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/helpers/application_helper.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/helpers/home_helper.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/helpers/home_helper.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/home_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/helpers/questions_helper.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/helpers/questions_helper.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/questions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/helpers/resources_helper.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/helpers/responses_helper.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/resources_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/helpers/responses_helper.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/helpers/survey_results_helper.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/responses_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/helpers/survey_results_helper.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/helpers/surveys_helper.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/survey_results_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/helpers/surveys_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/surveys_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/home_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/home_controller.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -180,11 +114,7 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/surveys_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/surveys_controller.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/surveys_controller.rb": {
         "lines": [
           1,
           1,
@@ -248,18 +178,8 @@
           null,
           null,
           1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-          2,
-          2,
-=======
-          1,
-          1,
->>>>>>> 1677784 (display category testcase)
-=======
           6,
           6,
->>>>>>> 74a19ee (working testcases)
           null,
           null,
           1,
@@ -278,11 +198,7 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/questions_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/questions_controller.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/questions_controller.rb": {
         "lines": [
           1,
           1,
@@ -365,26 +281,7 @@
           null
         ]
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/models/search_item.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/arefe/Desktop/public-health-app-v2/app/models/local_resource.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/resources_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/responses_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/responses_controller.rb": {
         "lines": [
           1,
           1,
@@ -401,33 +298,15 @@
           1,
           1,
           1,
-<<<<<<< HEAD
-          1,
->>>>>>> 1677784 (display category testcase)
-          null,
-          1,
-          2,
-          2,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-=======
->>>>>>> 5cc1666 (working testcases - 2)
-          null,
-          null,
-<<<<<<< HEAD
-          null,
-=======
           1,
           2,
           2,
           2,
           2,
           2,
->>>>>>> 74a19ee (working testcases)
           null,
           2,
           6,
@@ -435,15 +314,11 @@
           6,
           null,
           null,
-<<<<<<< HEAD
-          null,
-=======
           6,
           6,
           null,
           6,
           2,
->>>>>>> 74a19ee (working testcases)
           null,
           4,
           null,
@@ -454,21 +329,12 @@
           4,
           null,
           null,
-<<<<<<< HEAD
-=======
           4,
           4,
->>>>>>> 74a19ee (working testcases)
           null,
           4,
           null,
           null,
-<<<<<<< HEAD
-          null,
-          null,
-          null,
-          null,
-=======
           2,
           null,
           2,
@@ -483,312 +349,195 @@
           2,
           null,
           2,
->>>>>>> 74a19ee (working testcases)
           null,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-<<<<<<< HEAD
-=======
-          null
-        ]
-      },
-      "C:/public health app/public-health-app-v2/app/models/response.rb": {
-        "lines": [
           1,
+          null,
           1,
-          1,
->>>>>>> 1677784 (display category testcase)
+          0,
+          null,
           null,
           null,
           null
         ]
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/models/resource.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/response.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/search_item.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/channels/application_cable/channel.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/local_resource.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "C:/public health app/public-health-app-v2/app/channels/application_cable/connection.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "C:/public health app/public-health-app-v2/app/controllers/survey_results_controller.rb": {
->>>>>>> 1677784 (display category testcase)
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "C:/public health app/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
->>>>>>> 74a19ee (working testcases)
-        "lines": [
-          null,
-          null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-<<<<<<< HEAD
           null
         ]
       },
-      "/home/arefe/Desktop/public-health-app-v2/app/channels/application_cable/channel.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/resources_controller.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       },
-      "/home/arefe/Desktop/public-health-app-v2/app/channels/application_cable/connection.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/resource.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
       },
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/responses_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
           null,
           null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
           null,
           null,
           null,
-          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
           0,
           null,
           null,
-          0,
-          0,
           null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-=======
-          null,
-          null,
->>>>>>> 1677784 (display category testcase)
-          0
-        ],
-        "branches": {
-        }
-      },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/survey_results_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-<<<<<<< HEAD
-          0,
-          null,
-=======
           1,
           1,
           null,
           null
         ]
       },
-      "C:/public health app/public-health-app-v2/app/channels/application_cable/channel.rb": {
-        "lines": [
->>>>>>> 74a19ee (working testcases)
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
->>>>>>> 1677784 (display category testcase)
-=======
-      "C:/public health app/public-health-app-v2/app/channels/application_cable/connection.rb": {
->>>>>>> 74a19ee (working testcases)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -798,7 +547,17 @@
         "branches": {
         }
       },
-      "C:/public health app/public-health-app-v2/app/controllers/survey_results_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/survey_results_controller.rb": {
         "lines": [
           0,
           0,
@@ -813,7 +572,7 @@
         "branches": {
         }
       },
-      "C:/public health app/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
         "lines": [
           null,
           null,
@@ -849,145 +608,7 @@
         "branches": {
         }
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
->>>>>>> 1677784 (display category testcase)
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
->>>>>>> 74a19ee (working testcases)
-        "lines": [
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 74a19ee (working testcases)
-          0
-        ],
-        "branches": {
-        }
-      },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
->>>>>>> 74a19ee (working testcases)
-        "lines": [
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-<<<<<<< HEAD
-=======
->>>>>>> 1677784 (display category testcase)
-=======
->>>>>>> 74a19ee (working testcases)
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
->>>>>>> 1677784 (display category testcase)
-        "lines": [
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
         "lines": [
           null,
           null,
@@ -1023,11 +644,116 @@
         "branches": {
         }
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/jobs/application_job.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/jobs/application_job.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -1040,47 +766,9 @@
         "branches": {
         }
       },
-<<<<<<< HEAD
-      "/home/arefe/Desktop/public-health-app-v2/app/mailers/application_mailer.rb": {
-=======
-      "C:/public health app/public-health-app-v2/app/mailers/application_mailer.rb": {
->>>>>>> 1677784 (display category testcase)
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/mailers/application_mailer.rb": {
         "lines": [
           0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/arefe/Desktop/public-health-app-v2/app/models/category.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/arefe/Desktop/public-health-app-v2/app/models/response.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/arefe/Desktop/public-health-app-v2/app/models/survey_result.rb": {
-        "lines": [
           0,
           0,
           0
@@ -1089,18 +777,6 @@
         }
       }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "timestamp": 1682522108
-=======
-    "timestamp": 1682464091
->>>>>>> 1677784 (display category testcase)
-=======
-    "timestamp": 1682528186
->>>>>>> 74a19ee (working testcases)
-=======
-    "timestamp": 1682543379
->>>>>>> 5cc1666 (working testcases - 2)
+    "timestamp": 1682550260
   }
 }
