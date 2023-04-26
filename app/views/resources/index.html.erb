@@ -30,18 +30,27 @@
   <% end %>
 </div>
 
+<h1> Please select a category to see the external resources</h1>
 <%= form_tag resources_path(category: @category), method: :get do %>
   <%= select_tag :category, options_for_select(SearchItem.distinct.pluck(:category)) %>
   <%= submit_tag "Choose a Category" %>
 <% end %>
 
 <% if params[:category].present? %>
-  <% phrase = SearchItem.find_by(category: params[:category]).phrase %>
-  <h1> Google Search Results for "Food Banks near <%=current_user.zip %>" </h1>
-  <%= link_to "Food Resources", "https://www.google.com/maps/search/#{phrase.gsub(" ", "+").gsub("/", "%2F")}+near+#{CGI.escape(current_user.zip)}", target: :_blank %>
+  <% category = params[:category] %>
+  <% phrase = SearchItem.find_by(category: category).phrase %>
+  <h2> Google Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+  <%= link_to "#{category} Resources", "https://www.google.com/maps/search/#{phrase.gsub(" ", "+").gsub("/", "%2F")}+near+#{CGI.escape(current_user.zip)}", target: :_blank %>
 
-  <h1> 211texas Search Results for "Food Banks/Food Distribution Warehouses near <%=current_user.zip %>" </h1>
-  <%= link_to "Food Resources", "https://www.211texas.org/search/?Search=#{phrase.gsub(" ", "+").gsub("/", "%2F")}&org=72605&Count=5&NameOnly=True&pst=Coverage&sort=Proximity&TaxExact=False&Country=United+States&StateProvince=TX&County=-1&City=-1&PostalCode=#{CGI.escape(current_user.zip)}", target: :_blank %>
+  <h2> 211texas Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+  <%= link_to "#{category} Resources", "https://www.211texas.org/search/?Search=#{phrase.gsub(" ", "+").gsub("/", "%2F")}&org=72605&Count=5&NameOnly=True&pst=Coverage&sort=Proximity&TaxExact=False&Country=United+States&StateProvince=TX&County=-1&City=-1&PostalCode=#{CGI.escape(current_user.zip)}", target: :_blank %>
 <% else %>
-  <h2> Please select a category to see the external resources</h2>
+<% category = "Food Security" %>
+<% phrase = SearchItem.find_by(category: category).phrase %>
+<h2> Google Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+<%= link_to "#{category} Resources", "https://www.google.com/maps/search/#{phrase.gsub(" ", "+").gsub("/", "%2F")}+near+#{CGI.escape(current_user.zip)}", target: :_blank %>
+
+<h2> 211texas Search Results for "<%=phrase %> near <%=current_user.zip %>" </h2>
+<%= link_to "#{category} Resources", "https://www.211texas.org/search/?Search=#{phrase.gsub(" ", "+").gsub("/", "%2F")}&org=72605&Count=5&NameOnly=True&pst=Coverage&sort=Proximity&TaxExact=False&Country=United+States&StateProvince=TX&County=-1&City=-1&PostalCode=#{CGI.escape(current_user.zip)}", target: :_blank %>
+
 <% end %>
