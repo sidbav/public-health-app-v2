@@ -39,7 +39,5 @@
   Then("I see Category {string}") do |category|
     expect(page).to have_css("p", text: /Category: .+/)
   end
-# Then("I see Category {string}") do |category|
-#     expect(page).to have_css("Low Food Security", text: /Category: .+/)
-#   end
+
   

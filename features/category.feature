@@ -39,6 +39,11 @@ Given the following categories exist:
 | 2 | 1 | 1 | Marginal Food Security |
 | 2 | 2 | 4 | Low Food Security |
 | 2 | 5 | 6 | Very Low Food Security |
+| 3 | 0 | 0 | High Food Security |
+| 3 | 1 | 1 | Marginal Food Security |
+| 3 | 2 | 4 | Low Food Security |
+| 3 | 5 | 6 | Very Low Food Security |
+
 
 @javascript
 Scenario: Check if there are responses and display the expected category
