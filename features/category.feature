@@ -22,6 +22,12 @@ Given the following questions exist:
 | 1         | English | Which of these statements best describes the food eaten in your household in the last 12 months? | "Enough of the kinds of food we want to eat", "Enough, but not always the kinds of food we want", "Sometimes not enough to eat", "Often not enough to eat", "I don't know, or I refuse to answer" | 0, 1, 2, 3, 4, 5 | 2 ||||
 | 1         | Spanish | Tiene hijos menores de 18 años en su hogar? | "No", "Si" | 0, 1 |1||||
 | 1         | Spanish | Cuál de las siguientes declaraciones describe mejor la situación alimentaria en su hogar en los últimos 12 meses? | "Siempre comemos lo suficiente y los tipos de alimentos que deseamos", "Comemos lo suficiente pero no siempre lo que deseamos", "A veces no comemos lo suficiente", "Frecuentemente no comemos lo suficiente", "No sé, o me niego a responder" | 1, 2, 3, 4, 5 | 2 | | | |
+| 2         | English | "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.” Was that often, sometimes, or never true for (you/your household) in the last 12 months? | "Often True","Sometimes True","Never True","Don't Know or Refused" | 1,1,0,0 | HH3 ||||
+| 2         | English | "(I/we) couldn't afford to eat balanced meals." Was that often, sometimes, or never true for (you/your household) in the last 12 months? | "Often True","Sometimes True","Never True","Don't Know or Refused" | 1,1,0,0 | HH4 ||||
+| 2         | English | In the last 12 months, since last (name of current month), did (you/you or other adults in your household) ever cut the size of your meals or skip meals because there wasn't enough money for food? | "Yes","No","Don't Know" | 1,0,0 | AD1 | AD1a | Yes ||
+| 2         | English | How often did this happen—almost every month, some months but not every month, or in only 1 or 2 months? | "Almost Every Month","Some months but not every month","Only 1 month or 2 months","Don't Know" | 1,1,0,0 | AD1a | AD1 |||
+| 2         | English | In the last 12 months, did you ever eat less than you felt you should because there wasn't enough money for food? |"Yes","No","Don't Know" | 1,0,0 | AD2 ||||
+| 2         | English | In the last 12 months, were you ever hungry but didn't eat because there wasn't enough money for food? |"Yes","No","Don't Know" | 1,0,0 | AD3 ||||
 | 3         | English | Are you 18 years of age or older? | Yes, No | 1, 0 | 1 | 1A | Yes |<null>|
 | 3         | English | You should only see this question if response was "Yes" to the previous question | Yes, No | 1, 0 | 1A |<null>|<null>| 1 |
 | 3         | English | You should see this question anyways | Yes I do, No I don't | 1, 0 | 2 |<null>|<null>|<null>|
@@ -62,3 +68,12 @@ Scenario: Check if there are responses and display the expected category
   Then I should see a table Surveys
   And I click on the "See Your Responses" link on third row
   Then I see Category "Low Food Security"
+
+@javascript
+Scenario: Don't display category if no responses submitted
+ Given I am logged in
+ When I visit home page
+ When I click on the survey link
+ Then I should see a table Surveys
+ And I click on the "See Your Responses" link on third row
+ Then I should not see any category displayed

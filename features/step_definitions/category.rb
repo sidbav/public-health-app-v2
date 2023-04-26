@@ -40,4 +40,7 @@
     expect(page).to have_css("p", text: /Category: .+/)
   end
 
+  Then(/^I should not see any category displayed$/) do
+    expect(page).not_to have_css(".category-display")
+  end
   

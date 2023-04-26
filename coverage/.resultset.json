@@ -77,6 +77,7 @@
           1,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           78,
           null,
           73,
@@ -90,6 +91,11 @@
           null,
           73,
 >>>>>>> 74a19ee (working testcases)
+=======
+          80,
+          null,
+          75,
+>>>>>>> 5cc1666 (working testcases - 2)
           null,
           null,
           null
@@ -186,7 +192,7 @@
           null,
           null,
           1,
-          10,
+          11,
           null,
           null,
           null,
@@ -382,14 +388,20 @@
         "lines": [
           1,
           1,
+          2,
+          null,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
           1,
           null,
           1,
           1,
           1,
-          1,
-          1,
-          1,
+<<<<<<< HEAD
           1,
 >>>>>>> 1677784 (display category testcase)
           null,
@@ -402,6 +414,8 @@
           null,
           null,
           null,
+=======
+>>>>>>> 5cc1666 (working testcases - 2)
           null,
           null,
 <<<<<<< HEAD
@@ -1077,6 +1091,7 @@
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "timestamp": 1682522108
 =======
     "timestamp": 1682464091
@@ -1084,5 +1099,8 @@
 =======
     "timestamp": 1682528186
 >>>>>>> 74a19ee (working testcases)
+=======
+    "timestamp": 1682543379
+>>>>>>> 5cc1666 (working testcases - 2)
   }
 }
