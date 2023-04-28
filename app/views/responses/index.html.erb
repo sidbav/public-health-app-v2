@@ -32,6 +32,9 @@
   </table>
 
   <br>
+  <%= link_to 'Back to Surveys', surveys_path %>
+
+  <br>
 <% else %>
   <h2> No Record of Completing the "<%= @survey.survey_name%>" Survey</h2>
 <% end %>
