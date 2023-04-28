@@ -11,10 +11,10 @@ class SurveysController < ApplicationController
   def show
   end
 
-  # GET /surveys/new
-  def new
-    @survey = Survey.new
-  end
+  # # GET /surveys/new
+  # def new
+  #   @survey = Survey.new
+  # end
 
   # GET /surveys/1/edit
   def edit
@@ -57,7 +57,7 @@ class SurveysController < ApplicationController
   #     format.json { head :no_content }
   #   end
   # end
-  
+
   #select language
   def select_language
     @survey = Survey.find(params[:id])

@@ -70,9 +70,9 @@ class ResponsesController < ApplicationController
 
     private
 
-    def response_params
-      params.require(:response).permit(:survey_id, :user_id, :question_number, :response, :language, :category)
-    end
+    # def response_params
+    #   params.require(:response).permit(:survey_id, :user_id, :question_number, :response, :language, :category)
+    # end
 
 
   end
