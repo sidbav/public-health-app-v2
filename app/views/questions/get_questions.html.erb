@@ -101,7 +101,7 @@
         success: function(response) {
           console.log("Responses saved successfully");
           alert('Responses saved successfully');
-          window.location = "/surveys";
+          window.location.href = "<%= survey_responses_path(@survey) %>";
         },
         error: function(xhr) {
           console.log("Error saving answers: " + xhr.statusText);
