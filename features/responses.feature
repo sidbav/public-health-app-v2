@@ -25,7 +25,7 @@ Given the following questions exist:
 | 1         | Spanish | Tiene hijos menores de 18 años en su hogar? | "No", "Si" | 0, 1 |1||||
 | 1         | Spanish | Cuál de las siguientes declaraciones describe mejor la situación alimentaria en su hogar en los últimos 12 meses? | "Siempre comemos lo suficiente y los tipos de alimentos que deseamos", "Comemos lo suficiente pero no siempre lo que deseamos", "A veces no comemos lo suficiente", "Frecuentemente no comemos lo suficiente", "No sé, o me niego a responder" | 1, 2, 3, 4, 5 | 2 | | | |
 | 3         | English | Are you 18 years of age or older? | Yes, No | 1, 0 | 1 | 1A | Yes |<null>|
-| 3         | English | You should only see this question if response was "Yes" to the previous question | Yes, No | 1, 0 | 1A |<null>|<null>| 1 |
+| 3         | English | You should only see this question if response was "Yes" to the previous question | Okay, Not Okay | 1, 0 | 1A |<null>|<null>| 1 |
 | 3         | English | You should see this question anyways | Yes I do, No I don't | 1, 0 | 2 |<null>|<null>|<null>|
 
 
@@ -57,5 +57,30 @@ Scenario: Submitting Wrong Response
     Then I should see an alert "Survey is not completed, please answer all questions"
 
 
+@javascript
+Scenario: Submitting Correct Response with conditional questions
+  Given I am logged in
+  When I visit home page
+  When I click on the survey link
+  Then I should see a table Surveys
+  When I click on the "Take Survey" link on the third row
+  And I click on the "English" link
+  When I select Option "Yes" for Question 1 for the Testing Survey
+  When I select Option "Okay" for Question 1A for the Testing Survey
+  And I select Option "Yes I do" for Question 2 for the Testing Survey
+  And I click the Submit button 
+   Then I should see an alert "Responses saved successfully"
 
+@javascript
+Scenario: Submitting Wrong Response with conditional questions
+  Given I am logged in
+  When I visit home page
+  When I click on the survey link
+  Then I should see a table Surveys
+  When I click on the "Take Survey" link on the third row
+  And I click on the "English" link
+  When I select Option "Yes" for Question 1 for the Testing Survey
+  And I select Option "Yes I do" for Question 2 for the Testing Survey
+  And I click the Submit button
+    Then I should see an alert "Survey is not completed, please answer all questions"
   
