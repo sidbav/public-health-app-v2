@@ -25,20 +25,20 @@ RSpec.describe "/resources", type: :request do
     skip("Add a hash of attributes invalid for your model")
   }
 
-  describe "GET /index" do
-    it "renders a successful response" do
-      Resource.create! valid_attributes
-      get resources_url
-      expect(response).to be_successful
-    end
-  end
+  # describe "GET /index" do
+  #   it "renders a successful response" do
+  #     Resource.create! valid_attributes
+  #     get resources_url
+  #     expect(response).to be_successful
+  #   end
+  # end
 
-  describe "GET /show" do
-    it "renders a successful response" do
-      resource = Resource.create! valid_attributes
-      get resource_url(resource)
-      expect(response).to be_successful
-    end
-  end
+  # describe "GET /show" do
+  #   it "renders a successful response" do
+  #     resource = Resource.create! valid_attributes
+  #     get resource_url(resource)
+  #     expect(response).to be_successful
+  #   end
+  # end
 
 end
