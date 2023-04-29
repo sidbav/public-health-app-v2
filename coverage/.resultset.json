@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/user.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -23,17 +23,22 @@
           null,
           null,
           null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           1,
           1,
-          63,
+          68,
           0,
           null,
           null,
           null,
           null,
-          null,
-          null,
           1,
           1,
           1,
@@ -44,66 +49,70 @@
           1,
           1,
           null,
+          1,
+          1,
           null,
           null,
           null,
           1,
           null,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           1,
-          63,
+          68,
+          68,
+          0,
+          68,
+          0,
+          68,
           0,
           null,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/application_record.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/survey.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/question.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/question.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/survey_result.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey_result.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/application_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/category.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -113,75 +122,57 @@
           1,
           null,
           1,
-<<<<<<< HEAD
           86,
           null,
           81,
-=======
-          77,
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
-          null,
-          72,
           null,
           null,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/application_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/home_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/home_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/questions_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/questions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/resources_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/resources_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/responses_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/responses_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/survey_results_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/survey_results_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/surveys_helper.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/surveys_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/search_item.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/local_resource.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/home_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/home_controller.rb": {
         "lines": [
           1,
           1,
@@ -190,7 +181,7 @@
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/surveys_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/surveys_controller.rb": {
         "lines": [
           1,
           1,
@@ -198,7 +189,7 @@
           null,
           null,
           1,
-          0,
+          11,
           null,
           null,
           null,
@@ -254,13 +245,8 @@
           null,
           null,
           1,
-<<<<<<< HEAD
           8,
           8,
-=======
-          0,
-          0,
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
           null,
           null,
           1,
@@ -279,7 +265,7 @@
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/questions_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/questions_controller.rb": {
         "lines": [
           1,
           1,
@@ -342,15 +328,9 @@
           null,
           null,
           1,
-<<<<<<< HEAD
           7,
           7,
           7,
-=======
-          0,
-          0,
-          0,
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
           null,
           null,
           1,
@@ -368,9 +348,8 @@
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/responses_controller.rb": {
         "lines": [
-<<<<<<< HEAD
           1,
           1,
           5,
@@ -382,15 +361,13 @@
           4,
           4,
           4,
-=======
           null,
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
-          null,
+          1,
+          1,
           1,
           null,
           null,
           null,
-<<<<<<< HEAD
           1,
           3,
           3,
@@ -411,15 +388,10 @@
           2,
           null,
           7,
-=======
-          null,
-          null,
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
           null,
           null,
           null,
           null,
-<<<<<<< HEAD
           7,
           7,
           null,
@@ -489,61 +461,150 @@
         "lines": [
           1,
           1,
-=======
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
           null,
           null,
           1,
           2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/resource.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
           null,
           null
         ]
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/channels/application_cable/channel.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -553,7 +614,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/channels/application_cable/connection.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -563,173 +624,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/resources_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/responses_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-<<<<<<< HEAD
-          null,
-          null,
-=======
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/survey_results_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/survey_results_controller.rb": {
         "lines": [
           0,
           0,
@@ -744,7 +639,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
         "lines": [
           null,
           null,
@@ -780,7 +675,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
         "lines": [
           null,
           null,
@@ -816,7 +711,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
         "lines": [
           null,
           null,
@@ -856,7 +751,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
         "lines": [
           null,
           null,
@@ -889,7 +784,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
         "lines": [
           null,
           null,
@@ -925,7 +820,7 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/jobs/application_job.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -938,41 +833,8 @@
         "branches": {
         }
       },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/mailers/application_mailer.rb": {
+      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/mailers/application_mailer.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/category.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/resource.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/response.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
           0,
           0,
           0,
@@ -982,10 +844,6 @@
         }
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1682697147
-=======
-    "timestamp": 1682784908
->>>>>>> bbb35e5 (validation code and 1 new cucumber test case)
+    "timestamp": 1682787807
   }
 }

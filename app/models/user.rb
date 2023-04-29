@@ -18,6 +18,13 @@ class User < ApplicationRecord
     "West Virginia", "Wisconsin", "Wyoming"
   ]
 
+  valid_genders = [
+    "Male",
+    "Female",
+    "Other",
+    "Prefer not to say"
+  ]
+
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true, length: { maximum: 255 }
   validate :email_format
   def email_format
@@ -25,10 +32,8 @@ class User < ApplicationRecord
       errors.add(:email, "is not a valid email address")
     end
   end
-  #
-  # validates :password, presence: true, length: { minimum: 6 }
-  # validates :password_confirmation, length: { minimum: 6 }
-  # validate :passwords_match
+
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone_number, presence: true, numericality: { only_integer: true }, length: { minimum: 8, maximum: 15 }
@@ -36,36 +41,34 @@ class User < ApplicationRecord
   validates :address_line_2, presence: true, allow_blank: true
   validates :zip, presence: true, format: { with: /\A\d{5}\z/ }
   validates :city, presence: true, format: { with: /\A[a-zA-Z\u00C0-\u017F']+(\s[a-zA-Z\u00C0-\u017F']+)*\z/ }
-  validates :state, presence: true, inclusion: { in: valid_states }
-  validates :gender, presence: true, inclusion: { in: %w(Male Female Other Prefer not to say) }
-  # validates :date_of_birth, format: { with: /\A\d{2}\/\d{2}\/\d{4}\z/, message: "must be in the format MM/DD/YYYY" }
+  validates :state, presence: true, :inclusion=> { in: valid_states }
+  validates :gender, presence: true, :inclusion=> { in: valid_genders }
 
-  # validates :date_of_birth, presence: true, format: { with: /\A\d{4}-\d{2}-\d{2}\z/, message: "must be in the format yyyy-mm-dd" }
+  validates :date_of_birth, presence: true, format: { with: /\A\d{4}-\d{2}-\d{2}\z/, message: "must be in the format yyyy-mm-dd" }
+  validate :date_of_birth_valid
 
-  validate :valid_year_format
+  # validate :valid_year_format
 
   private
 
-  def valid_year_format
-    if date_of_birth.present? && date_of_birth.year.to_s.length != 4
-      errors.add(:date_of_birth, "year must be 4 digits")
+  # def valid_year_format
+  #   if date_of_birth.present? && date_of_birth.year.to_s.length != 4
+  #     errors.add(:date_of_birth, "year must be 4 digits")
+  #   end
+  # end
+
+
+
+  def date_of_birth_valid
+    date_18_years_ago = Time.zone.today - 18.years
+    if date_of_birth > Date.today
+      errors.add(:date_of_birth, "cannot be in the future")
+    elsif date_of_birth.year < 1880
+      errors.add(:date_of_birth, "cannot be a year before 1880")
+    elsif date_of_birth.present? && date_of_birth > 18.years.ago.to_date
+      errors.add(:date_of_birth, "You must be atleast 18 years old to signup")
     end
   end
-  # #
-  # # validates :date_of_birth, presence: true
-  # # validate :date_of_birth_valid?
-  # #
-  # # def date_of_birth_valid?
-  # #   dob = Date.parse(date_of_birth) rescue nil
-  # #   if dob > Date.today
-  # #     errors.add(:date_of_birth, "cannot be in the future")
-  # #   elsif dob.year < 1880
-  # #     errors.add(:date_of_birth, "cannot be before 1880")
-  # #   end
-  # # end
-  #
-  # def passwords_match
-  #   errors.add(:password_confirmation, "does not match") unless password_confirmation == password
-  # end
+
 
 end

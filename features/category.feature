@@ -1,13 +1,13 @@
 Feature: SurveyResult Feature
   As a user
   I want to be able to access my survey results
-  So that I can track my category health progress 
+  So that I can track my category health progress
 Background: Categories and survey_results and questions and surveys and users in database:
 
 Given the following users exist:
-| id | first_name | last_name | phone_number | address_line_1 | address_line_2 | zip | city | state | date_of_birth | email | password | confirmation_token | confirmed_at | confirmation_sent_at |
-| 1 | Test | User | 1231231234 | 123 Street | | 12345 | College Station | Texas | 1999-01-01 | testuser@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
-| 2 | Test | User2 | 1231231234 | 123 Street | APT 123 | 12345 | College Station | Texas | 1999-01-01 | testuser2@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
+|gender | id | first_name | last_name | phone_number | address_line_1 | address_line_2 | zip | city | state | date_of_birth | email | password | confirmation_token | confirmed_at | confirmation_sent_at |
+| Male | 1 | Test | User | 1231231234 | 123 Street | | 12345 | College Station | Texas | 1999-01-01 | testuser@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
+|Male | 2 | Test | User2 | 1231231234 | 123 Street | APT 123 | 12345 | College Station | Texas | 1999-01-01 | testuser2@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
 
 Given the following surveys exist:
 | id | survey_name | survey_category | languages |
@@ -64,7 +64,7 @@ Scenario: Check if there are responses and display the expected category
   And I click the Submit button
   Then I should see an alert "Responses saved successfully"
   Then I accept the alert
-  And I wait to get to survey screen 
+  And I wait to get to survey screen
   Then I should see a table Surveys
   And I click on the "See Your Responses" link on third row
   Then I see Category "Low Food Security"
