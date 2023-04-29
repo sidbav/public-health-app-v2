@@ -42,7 +42,7 @@ Scenario: A User Cannot get another confirmation token
     And I click "Resend confirmation instructions" button
   Then I should see "Email was already confirmed, please try signing in"
 
-Scenario: An email that was not previously registered cannot recieve a confirmation token
+Scenario: An email that was not previously registered cannot receive a confirmation token
   Given I previously did not register for an account with "not_a_user@test.com"
   When I go to signup
     And I click the "Didn't receive confirmation instructions?" hyperlink
@@ -87,3 +87,4 @@ Scenario: User logs in, then tries to sign up again
   And I should see "Signed in successfully."
   Then I go to signup
   And I should see "You are already signed in"
+
