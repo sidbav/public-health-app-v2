@@ -5,9 +5,9 @@ So that I can get a score for the questions on the survey
 Background: Question and surveys and users in database:
 
 Given the following users exist:
-| first_name | last_name | phone_number | address_line_1 | address_line_2 | zip | city | state | date_of_birth | email | password | confirmation_token | confirmed_at | confirmation_sent_at |
-| Test | User | 1231231234 | 123 Street | | 12345 | College Station | Texas | 1999-01-01 | testuser@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
-| Test | User2 | 1231231234 | 123 Street | APT 123 | 12345 | College Station | Texas | 1999-01-01 | testuser2@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
+| gender | first_name | last_name | phone_number | address_line_1 | address_line_2 | zip | city | state | date_of_birth | email | password | confirmation_token | confirmed_at | confirmation_sent_at |
+| Female | Test | User | 1231231234 | 123 Street | | 12345 | College Station | Texas | 1999-01-01 | testuser@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
+| Female | Test | User2 | 1231231234 | 123 Street | APT 123 | 12345 | College Station | Texas | 1999-01-01 | testuser2@test.com | Test123 | 123 | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
 
 Given the following surveys exist:
 | id | survey_name | survey_category | languages |
@@ -41,7 +41,7 @@ Scenario: Submitting Correct Response
   And I click on the "English" link
   When I select Option "No" for Question 1 for the Testing Survey
   And I select Option "Yes I do" for Question 2 for the Testing Survey
-  And I click the Submit button 
+  And I click the Submit button
    Then I should see an alert "Responses saved successfully"
 
 @javascript
@@ -68,7 +68,7 @@ Scenario: Submitting Correct Response with conditional questions
   When I select Option "Yes" for Question 1 for the Testing Survey
   When I select Option "Okay" for Question 1A for the Testing Survey
   And I select Option "Yes I do" for Question 2 for the Testing Survey
-  And I click the Submit button 
+  And I click the Submit button
    Then I should see an alert "Responses saved successfully"
 
 @javascript
@@ -83,4 +83,4 @@ Scenario: Submitting Wrong Response with conditional questions
   And I select Option "Yes I do" for Question 2 for the Testing Survey
   And I click the Submit button
     Then I should see an alert "Survey is not completed, please answer all questions"
-  
+

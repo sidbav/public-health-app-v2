@@ -7,9 +7,9 @@ Feature: Application Sign in
 Background: Users in database
 
   Given the following users exist:
-  | first_name | last_name | phone_number | address_line_1 | address_line_2 | zip   | city            | state        | date_of_birth | email                 | password | confirmation_token   | confirmed_at               | confirmation_sent_at       |
-  | Test       | User      | 1231231234   | 123 Street     |                | 12345 | College Station | Texas        | 1999-01-01    | testuser@test.com     | Test123  | 123                  | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
-  | Not        | Confirmed | 1231231234   | 123 Street     |                | 12345 | College Station | Texas        | 1999-01-01    | notconfirmed@test.com | Test123  | 123                  |                            | 2023-02-21 21:16:57.180869 |
+  |gender | first_name | last_name | phone_number | address_line_1 | address_line_2 | zip   | city            | state        | date_of_birth | email                 | password | confirmation_token   | confirmed_at               | confirmation_sent_at       |
+  |Female | Test       | User      | 1231231234   | 123 Street     |                | 12345 | College Station | Texas        | 1999-01-01    | testuser@test.com     | Test123  | 123                  | 2023-02-21 21:19:16.346030 | 2023-02-21 21:16:57.180869 |
+  |Female | Not        | Confirmed | 1231231234   | 123 Street     |                | 12345 | College Station | Texas        | 1999-01-01    | notconfirmed@test.com | Test123  | 123                  |                            | 2023-02-21 21:16:57.180869 |
 
 Scenario: Signed up users providing correct credentials can sign in
   When I go to the sign in page
