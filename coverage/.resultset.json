@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/user.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -33,8 +33,8 @@
           1,
           1,
           1,
-          68,
-          0,
+          92,
+          1,
           null,
           null,
           null,
@@ -65,13 +65,13 @@
           null,
           null,
           1,
-          68,
-          68,
-          0,
-          68,
-          0,
-          68,
-          0,
+          92,
+          92,
+          1,
+          91,
+          1,
+          90,
+          1,
           null,
           null,
           null,
@@ -79,40 +79,40 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/application_record.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/survey.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/question.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/question.rb": {
         "lines": [
           1,
           null,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/survey_result.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/survey_result.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/category.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/category.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/application_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -122,66 +122,66 @@
           1,
           null,
           1,
-          86,
+          110,
           null,
-          81,
+          97,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/application_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/home_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/questions_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/resources_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/responses_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/survey_results_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/helpers/surveys_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/home_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
           null,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/surveys_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/home_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/questions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/resources_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/responses_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/survey_results_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/helpers/surveys_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/home_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/surveys_controller.rb": {
         "lines": [
           1,
           1,
@@ -265,7 +265,7 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/questions_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/questions_controller.rb": {
         "lines": [
           1,
           1,
@@ -348,7 +348,7 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/responses_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/responses_controller.rb": {
         "lines": [
           1,
           1,
@@ -430,7 +430,7 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/response.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/response.rb": {
         "lines": [
           1,
           1,
@@ -445,19 +445,19 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/search_item.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/search_item.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/local_resource.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/local_resource.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/resources_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/resources_controller.rb": {
         "lines": [
           1,
           1,
@@ -532,13 +532,13 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/models/resource.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/models/resource.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/registrations_controller.rb": {
         "lines": [
           null,
           null,
@@ -604,7 +604,7 @@
           null
         ]
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/channel.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -614,7 +614,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/channels/application_cable/connection.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -624,46 +624,10 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/survey_results_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/survey_results_controller.rb": {
         "lines": [
           0,
           0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -675,7 +639,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/confirmations_controller.rb": {
         "lines": [
           null,
           null,
@@ -711,7 +675,43 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/omniauth_callbacks_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/passwords_controller.rb": {
         "lines": [
           null,
           null,
@@ -751,7 +751,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/sessions_controller.rb": {
         "lines": [
           null,
           null,
@@ -784,7 +784,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/controllers/users/unlocks_controller.rb": {
         "lines": [
           null,
           null,
@@ -820,7 +820,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/jobs/application_job.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -833,7 +833,7 @@
         "branches": {
         }
       },
-      "/Users/sidbav/Documents/TAMU/1Year/2023_Winter/606/Project/public-health-app-v2/app/mailers/application_mailer.rb": {
+      "/Users/dheepdalamal/Downloads/CSCE606/public-health-app-v2/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -844,6 +844,6 @@
         }
       }
     },
-    "timestamp": 1682787807
+    "timestamp": 1682818176
   }
 }

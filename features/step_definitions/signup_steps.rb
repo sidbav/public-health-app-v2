@@ -155,3 +155,96 @@ Given /I previously did not register for an account with "(.*)"/ do |email|
   user = User.find_by(email: email)
   expect(user).to eq(nil)
 end
+
+And /All fields except phone number are correct/ do
+  fill_in "user[first_name]", with: "First"
+  fill_in "user[last_name]", with: "Last"
+  fill_in "user[email]", with: "tes9283ser@test.com"
+  fill_in "user[address_line_1]", with: "123 Street Drive"
+  fill_in "user[address_line_2]", with: "APT 123"
+  fill_in "user[zip]", with: "12345"
+  fill_in "user[city]", with: "Cool City"
+  select "Male", :from => "user[gender]"
+  select "Texas", :from => "user[state]"
+  fill_in "user[date_of_birth]", with: "1999-01-01"
+  fill_in "user[password]", with: "helloworld"
+  fill_in "user[password_confirmation]", with: "helloworld"
+end
+
+And /I enter a longer than allowed phone number/ do
+  fill_in "user[phone_number]", with: "1231231234190120921910912"
+end
+
+And /I enter a shorter than allowed phone number/ do
+  fill_in "user[phone_number]", with: "123"
+end
+
+And /I enter a non-numerical phone number/ do
+  fill_in "user[phone_number]", with: "92983298bek"
+end
+
+And /All fields except city are correct/ do
+  fill_in "user[first_name]", with: "First"
+  fill_in "user[last_name]", with: "Last"
+  fill_in "user[email]", with: "tes9283ser@test.com"
+  fill_in "user[phone_number]", with: "12312313322"
+  fill_in "user[address_line_1]", with: "123 Street Drive"
+  fill_in "user[address_line_2]", with: "APT 123"
+  fill_in "user[zip]", with: "12345"
+  select "Male", :from => "user[gender]"
+  select "Texas", :from => "user[state]"
+  fill_in "user[date_of_birth]", with: "1999-01-01"
+  fill_in "user[password]", with: "helloworld"
+  fill_in "user[password_confirmation]", with: "helloworld"
+end
+
+And /I enter a city with numbers/ do
+  fill_in "user[city]", with: "Cool2o39City"
+end
+
+
+And /All fields except date of birth are correct/ do
+  fill_in "user[first_name]", with: "First"
+  fill_in "user[last_name]", with: "Last"
+  fill_in "user[email]", with: "tes9283ser@test.com"
+  fill_in "user[phone_number]", with: "12312313322"
+  fill_in "user[address_line_1]", with: "123 Street Drive"
+  fill_in "user[address_line_2]", with: "APT 123"
+  fill_in "user[zip]", with: "12345"
+  select "Male", :from => "user[gender]"
+  select "Texas", :from => "user[state]"
+  fill_in "user[city]", with: "Cool City"
+  fill_in "user[password]", with: "helloworld"
+  fill_in "user[password_confirmation]", with: "helloworld"
+end
+
+And /Current date minus date of birth I entered is less than 18 years/ do
+  fill_in "user[date_of_birth]", with: "2020-01-01"
+end
+
+And /date of birth I entered is before 1880/ do
+fill_in "user[date_of_birth]", with: "1830-01-01"
+end
+
+And /date of birth I entered is in the future/ do
+  fill_in "user[date_of_birth]", with: "3298-01-01"
+end
+
+And /All fields except email are correct/ do
+  fill_in "user[first_name]", with: "First"
+  fill_in "user[last_name]", with: "Last"
+  fill_in "user[phone_number]", with: "12312313322"
+  fill_in "user[address_line_1]", with: "123 Street Drive"
+  fill_in "user[address_line_2]", with: "APT 123"
+  fill_in "user[zip]", with: "12345"
+  select "Male", :from => "user[gender]"
+  select "Texas", :from => "user[state]"
+  fill_in "user[date_of_birth]", with: "1995-01-01"
+  fill_in "user[city]", with: "Cool City"
+  fill_in "user[password]", with: "helloworld"
+  fill_in "user[password_confirmation]", with: "helloworld"
+end
+
+And /email is in incorrect format/ do
+  fill_in "user[email]", with: "invalid@test981"
+end

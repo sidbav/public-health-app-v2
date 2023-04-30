@@ -88,3 +88,58 @@ Scenario: User logs in, then tries to sign up again
   Then I go to signup
   And I should see "You are already signed in"
 
+Scenario: Phone number too long
+  When I go to signup
+  And All fields except phone number are correct
+  And I enter a longer than allowed phone number
+  And I click "Sign up" button
+  Then I should see "Phone number is too long"
+
+Scenario: Phone number too short
+  When I go to signup
+  And All fields except phone number are correct
+  And I enter a shorter than allowed phone number
+  And I click "Sign up" button
+  Then I should see "Phone number is too short"
+
+Scenario: Non-numerical phone number
+  When I go to signup
+  And All fields except phone number are correct
+  And I enter a non-numerical phone number
+  And I click "Sign up" button
+  Then I should see "not a number"
+
+Scenario: City with numbers
+  When I go to signup
+  And All fields except city are correct
+  And I enter a city with numbers
+  And I click "Sign up" button
+  Then I should see "City is invalid"
+
+Scenario: Current date minus date of birth is less than 18 years
+  When I go to signup
+  And All fields except date of birth are correct
+  And Current date minus date of birth I entered is less than 18 years
+  And I click "Sign up" button
+  Then I should see "must be atleast 18 years"
+
+Scenario: date of birth is before 1880
+  When I go to signup
+  And All fields except date of birth are correct
+  And date of birth I entered is before 1880
+  And I click "Sign up" button
+  Then I should see "before 1880"
+
+Scenario: date of birth is in the future
+  When I go to signup
+  And All fields except date of birth are correct
+  And date of birth I entered is in the future
+  And I click "Sign up" button
+  Then I should see "in the future"
+
+Scenario: email in incorrect format
+  When I go to signup
+  And All fields except email are correct
+  And email is in incorrect format
+  And I click "Sign up" button
+  Then I should see "not a valid email"
