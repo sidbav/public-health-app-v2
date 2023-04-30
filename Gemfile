@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Gem used for the test cases
+gem 'shoulda-matchers', '~> 4.0'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -81,7 +84,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem "rubycritic", require: false
-  gem 'ZenTest'
+  # gem 'ZenTest'
 end
 
 group :test do
