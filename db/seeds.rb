@@ -16,11 +16,12 @@ user = User.new(
   address_line_1: 'address',
   address_line_2: 'address',
   city: 'city',
-  state: 'state',
+  state: 'Texas',
   zip: '77840',
   phone_number: '1234567890',
   date_of_birth: Date.new(1990, 1, 1),
-  confirmed_at: Time.now
+  confirmed_at: Time.now,
+  gender: 'Male'
 )
 user.skip_confirmation_notification! # Skip sending email confirmation
 user.save!
@@ -34,11 +35,12 @@ user = User.new(
   address_line_1: 'address',
   address_line_2: 'address',
   city: 'city',
-  state: 'state',
+  state: 'Texas',
   zip: '12345',
   phone_number: '1234567890',
   date_of_birth: Date.new(1990, 1, 1),
-  confirmed_at: Time.now
+  confirmed_at: Time.now,
+  gender: 'Male'
 )
 user.skip_confirmation_notification! # Skip sending email confirmation
 user.save!
@@ -52,10 +54,11 @@ user = User.new(
   address_line_1: 'address',
   address_line_2: 'address',
   city: 'city',
-  state: 'state',
+  state: 'Texas',
   zip: '12345',
   phone_number: '1234567890',
-  date_of_birth: Date.new(1990, 1, 1)
+  date_of_birth: Date.new(1990, 1, 1),
+  gender: 'Male'
 )
 user.save!
 
