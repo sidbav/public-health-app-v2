@@ -4,13 +4,10 @@ Our application, Public Health App, is a dynamic, user-centric health management
 
 Upon registration, users enter key information, enabling a tailored health journey.Once logged in, patients gain access to a variety of health surveys. These assessments are designed to gauge different aspects of one's health, identifying potential areas of concern and providing personalized insights.Based on survey outcomes, Public Health App directs users to nearby health resources.
 
-While it currently offers health surveys, its design allows for future integration of diverse surveys addressing various aspects such as food insecurity, mental wellness, and employment, all available in multiple languages.As we continue to enhance the app and gather more user data, we aim to offer even more tailored health recommendations and resources. 
+While it currently offers food insecurity surveys, its design allows for future integration of diverse surveys addressing various aspects such as mental wellness, and employment etc, all available in multiple languages.As we continue to enhance the app and gather more user data, we aim to offer even more tailored health recommendations and resources. 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Find our app https://healthapp.herokuapp.com/
-
-### Prerequisites
+## Prerequisites
 
 Ensure you have the following installed on your local development machine:
 
@@ -19,14 +16,14 @@ Ensure you have the following installed on your local development machine:
 
 - Check your Rails version. If no rails, run gem install rails.
 - Check your Bundler version. If bundle -v fails, run gem install bundler to install it. 
--Verify the Heroku command line tool has been installed in the development environment. [Heroku CLI Documentation](https://devcenter.heroku.com/articles/heroku-cli#install-with-ubuntu-debian-apt-get)
+- Verify the Heroku command line tool has been installed in the development environment. [Heroku CLI Documentation](https://devcenter.heroku.com/articles/heroku-cli#install-with-ubuntu-debian-apt-get)
 - PostgreSQL: The default Rails development environment expects to use the SQLite3 database. For shifting to PostgreSQL for development, follow the instructions in this [guide](https://github.com/sidbav/public-health-app-v2/wiki/Shifting-to-PostgreSQL-for-development).
 
 
-### Installing
+## Installing
 
 Clone the repository:
-git clone https://github.com/sidbav/public-health-app-v2.git
+`git clone https://github.com/sidbav/public-health-app-v2.git`
 
 Install the dependencies:
 bundle install
@@ -38,16 +35,16 @@ bundle -v &&\
 heroku -v &&\
 
 ### Setup the database:
-rails db:create
-rails db:migrate
+`rails db:create`
+`rails db:migrate`
 
 
 ### To seed the database, run:
-rails db:seed
+`rails db:seed`
 
 ### Running the Application
 You can start the rails server using the command given below.
-rails s
+`rails s`
 
 ### Change the database for production
 - All apps on Heroku use the PostgreSQL database. For Ruby/Rails apps to do so, they must include the pg gem.To specify production-specific gems, add gem 'pg'  for Heroku deployment
@@ -63,13 +60,14 @@ Note: Heroku ignores config/database.yml and enforces the use of PostgreSQL. Mod
 You may find PostgreSQL Explorer VS code extension useful 
 
 ## How to run the test suite
- 1. Before running the tests, make sure you have the required gems installed. Run bundle install.
- 2. Cucumber is used for testing the application using BDD.  We have defined 31 scenarios to simulate user interactions with the app.To run Cucumber tests 'bundle exec cucumber'
- 3. RSpec is used for TDD in our application.We have 18 RSpec tests covering various aspects of the app. Run 'bundle exec rspec'
+
+ 1. Before running the tests, make sure you have the required gems installed. Run `bundle install`.
+ 2. Cucumber is used for testing the application using BDD.  We have defined 31 scenarios to simulate user interactions with the app.To run Cucumber tests `bundle exec cucumber`
+ 3. RSpec is used for TDD in our application.We have 18 RSpec tests covering various aspects of the app. Run `bundle exec rspec`
  ### Code Coverage with SimpleCov
  SimpleCov is used for code coverage. To generate a coverage report, add SimpleCov to your test helper file:
-  require 'simplecov'
-  SimpleCov.start
+  `require 'simplecov'`
+  `SimpleCov.start`
  After running tests, view the coverage report by opening coverage/index.html in your browser.
 
 ## Heroku Deployment Instructions
