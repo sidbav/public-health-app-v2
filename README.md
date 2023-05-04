@@ -47,17 +47,17 @@ You can start the rails server using the command given below.
 `rails s`
 
 ### Change the database for production
-- All apps on Heroku use the PostgreSQL database. For Ruby/Rails apps to do so, they must include the pg gem.To specify production-specific gems, add gem 'pg'  for Heroku deployment
+- All apps on Heroku use the PostgreSQL database. For Ruby/Rails apps to do so, they must include the pg gem.To specify production-specific gems, add `gem 'pg'`  for Heroku deployment
 - To make sure sqlite3 gem is only loaded in development and test environments but not production.
- make sure  gem 'sqlite3' is added for development
+ make sure  `gem 'sqlite3'` is added for development
 
 - Always Run bundle install to update dependencies after you modify gemfile
 
-If you encounter an error, run bundle config set --local without 'production' and then bundle install again.Commit the updated Gemfile and Gemfile.lock.
+If you encounter an error, run `bundle config set --local without 'production'` and then `bundle install` again.Commit the updated Gemfile and Gemfile.lock.
 
 Note: Heroku ignores config/database.yml and enforces the use of PostgreSQL. Modifying the production: section in database.yml will not affect Heroku's behavior.
 
-You may find PostgreSQL Explorer VS code extension useful 
+You may find `PostgreSQL Explorer` VS code extension useful 
 
 ## How to run the test suite
 
