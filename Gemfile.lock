@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    ZenTest (4.12.1)
     actioncable (7.0.4.2)
       actionpack (= 7.0.4.2)
       activesupport (= 7.0.4.2)
@@ -340,6 +339,8 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     sexp_processor (4.16.1)
+    shoulda-matchers (4.5.1)
+      activesupport (>= 4.2.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -403,7 +404,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  ZenTest
   bootsnap
   byebug
   capybara
@@ -428,6 +428,7 @@ DEPENDENCIES
   rubocop-rspec
   rubycritic
   selenium-webdriver
+  shoulda-matchers (~> 4.0)
   simplecov
   sprockets-rails
   stimulus-rails

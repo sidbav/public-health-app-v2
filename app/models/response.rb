@@ -1,11 +1,14 @@
-class Response < ApplicationRecord
-  belongs_to :survey
-  belongs_to :user
+# app/models/response.rb
 
-  # def calculate_response_score
-  #   question = Question.find_by(survey_id: survey_id, question_number: question_number)
-  #   option_points_list = question.option_points_list
-  #   response_score = option_points_list[response_option_number]
-  #   save
-  # end
+class Response < ApplicationRecord
+  belongs_to :user
+  belongs_to :survey
+
+  def calculate_response_score
+    question = Question.find_by(survey_id: survey_id, question_number: question_number)
+    option_points = question.option_points_list
+    self.response_score = option_points[response_option_number - 1]
+    save
+    response_score
+  end
 end
